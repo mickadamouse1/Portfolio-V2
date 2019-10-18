@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: #333;
   overflow: hidden;
@@ -14,41 +18,104 @@ body {
 #bkgdLandingpage {
   position: absolute;
   width: 100%;
-  opacity: 0.4;
+  height: 100%;
+  background: url("../images/17.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.6;
 }
 
-#landingPage div {
+#landingPageContent {
   position: relative;
-  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: -3rem;
 }
 
 #name {
-  color: #f4f4f4;
-  font-size: 4rem;
-  font-family: sans-serif;
-  margin: 1rem;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+  color: snow;
+  font-size: 8rem;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 50rem;
+  text-align: center;
+  line-height: 8rem;
+  margin: 0.5rem;
+  text-shadow: 0 3px 1px rgba(0, 0, 0, 0.7);
 }
 
-#landingPage hr {
+#hrGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 27rem;
+  margin: 0 auto;
+}
+
+#hrGroup div {
+  width: 1.1rem;
+  height: 1.1rem;
+  background: indianred;
+  border-radius: 1rem;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+#landingPageContent hr {
   background: #f4f4f4;
-  height: 0.2rem;
-  width: 24rem;
+  height: 0.25rem;
+  width: 11rem;
   margin: 1rem auto;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  border: none;
 }
 
-#arrow {
-  color: #f4f4f4;
-  font-size: 2.5rem;
-  border: 2px solid rgba(255, 255, 255, 0.6);
+#landingPageContent p {
+  margin: 0 auto;
+  width: 33rem;
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: wheat;
+  line-height: 1.8rem;
+  text-shadow: 0 2px 0 #000;
+}
+
+#landingPageContent span {
+  color: white;
+}
+
+#landingPageLinks {
+  display: flex;
+  width: 29rem;
+  margin: 1.5rem 0 0 0;
+}
+
+#landingPageLinks a {
+  background: #cd5c5c;
   padding: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1rem;
-  height: 3rem;
+  width: 12rem;
+  height: 3.2rem;
+  border-radius: 0.2rem;
   text-decoration: none;
   margin: 0 auto;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+#landingPageLink:hover {
+  background: #d16a6a;
+}
+
+#landingPageLinks p {
+  font-size: 1.5rem;
+  color: #f4f4f4;
+  font-family: "Roboto Slab";
+  font-weight: 300;
 }
