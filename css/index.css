@@ -1,11 +1,58 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
   background: #333;
-  overflow: hidden;
+  height: 100%;
+  font-family: "Roboto Slab", sans-serif;
+  color: #fffafa;
 }
+
+/*////////////////////////////////////////////////////*/
+
+/* ANIMATION TOOLS */
+
+.fadeOpacity {
+  opacity: 0;
+}
+
+
+/*////////////////////////////////////////////////////*/
+
+/* NAVIGATION BAR */
+
+#nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  position: fixed;
+  z-index: 99999;
+  transition: .5s ease;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+
+/*////////////////////////////////////////////////////*/
+
+/* LANDING PAGE */
 
 #landingPage {
   display: flex;
@@ -37,7 +84,6 @@ body {
 #name {
   color: snow;
   font-size: 8rem;
-  font-family: "Roboto Slab", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   width: 50rem;
@@ -77,10 +123,9 @@ body {
   margin: 0 auto;
   width: 33rem;
   text-align: center;
-  font-family: "Roboto Slab";
   font-size: 1.2rem;
   font-weight: 300;
-  color: wheat;
+  /* color: wheat; */
   line-height: 1.8rem;
   text-shadow: 0 2px 0 #000;
 }
@@ -109,13 +154,20 @@ body {
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
 }
 
-#landingPageLink:hover {
+.landingPageLink:hover {
   background: #d16a6a;
 }
 
 #landingPageLinks p {
   font-size: 1.5rem;
-  color: #f4f4f4;
-  font-family: "Roboto Slab";
+  color: #fffafa;
   font-weight: 300;
+}
+
+/*////////////////////////////////////////////////////*/
+
+/* ABOUT PAGE */
+
+#aboutpage {
+  height: 100vh;
 }
