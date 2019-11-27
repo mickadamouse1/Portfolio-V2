@@ -47,7 +47,7 @@ body {
 nav ul {
   display: flex;
   justify-content: space-around;
-  width: 35%;
+  width: 32rem;
 }
 
 /*////////////////////////////////////////////////////*/
@@ -140,7 +140,7 @@ nav ul {
   margin: 1.5rem 0 0 0;
 }
 
-#landingPageLinks a {
+.landingPageLink {
   background: #cd5c5c;
   padding: 0 1rem;
   display: flex;
@@ -170,4 +170,70 @@ nav ul {
 
 #aboutpage {
   height: 100vh;
+}
+
+/* Sizez */
+/*
+  Wide-screen Desktop - 1440
+  Desktop - 1280
+  Large tablet - 1080
+  landscape phone/tablet - 800
+  large tablet - 768
+  small tablet - 600
+  phone - 480
+  phone - 320
+*/
+
+/* @media (max-width: 800px) {
+  #name {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+}
+*/
+
+@media (max-width: 321px) {
+  nav ul {
+    width: 15rem;
+  }
+
+  #nav {
+    font-size: 0.8rem;
+  }
+
+  #name {
+    font-size: 3rem;
+    line-height: 3rem;
+    width: 19rem;
+  }
+
+  #hrGroup {
+    width: 17rem;
+    height: 1.5rem;
+  }
+
+  #hrGroup div {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  #hrGroup hr {
+    width: 7rem;
+  }
+
+  #landingPageContent p {
+    width: 19rem;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+  }
+
+  #landingPageLinks {
+    margin: 1rem 0 0 0;
+    width: 19rem;
+  }
+
+  .landingPageLink {
+    width: 7rem;
+    height: 2.2rem;
+  }
 }
