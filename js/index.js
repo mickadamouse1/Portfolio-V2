@@ -1,4 +1,8 @@
 window.onload = function(){
+  const btnHome = document.getElementById("btnHome");
+  const btnAbout = document.getElementById("btnAbout");
+  const btnProjects = document.getElementById("btnProjects");
+  const btnContact = document.getElementById("btnContact");
   const btnLearnMore = document.getElementById("btnLearnMore");
   const nav = document.getElementById("nav");
 
@@ -18,7 +22,13 @@ window.onload = function(){
     setTimeout(function(){
       nav.classList.toggle("fadeOpacity");
     }, 550);
+  }
 
+  btnHome.onclick = function() {
+    scroll(getOffset(landingPage));
+    setTimeout(function() {
+      nav.classList.toggle("fadeOpacity");
+    }, 550);
   }
 
   // btnAbout.onclick = function() {
