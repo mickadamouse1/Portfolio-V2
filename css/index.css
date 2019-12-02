@@ -90,7 +90,7 @@ nav ul {
   text-align: center;
   line-height: 8rem;
   margin: 0.5rem;
-  text-shadow: 0 3px 1px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 #hrGroup {
@@ -107,7 +107,7 @@ nav ul {
   height: 1.1rem;
   background: indianred;
   border-radius: 1rem;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  box-shadow: 0 1.5px 1px rgba(0, 0, 0, 0.35);
 }
 
 #landingPageContent hr {
@@ -115,7 +115,7 @@ nav ul {
   height: 0.25rem;
   width: 11rem;
   margin: 1rem auto;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1.5px 1px rgba(0, 0, 0, 0.35);
   border: none;
 }
 
@@ -123,10 +123,10 @@ nav ul {
   margin: 0 auto;
   width: 33rem;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 300;
   line-height: 1.8rem;
-  text-shadow: 0 2px 0 #000;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 #landingPageContent span {
@@ -171,6 +171,12 @@ nav ul {
   height: 100vh;
 }
 
+/*///////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////// MEDIA QUERIES | MEDIA QUERIES ////////////////////////*/
+/*//////////////////////// MEDIA QUERIES | MEDIA QUERIES ////////////////////////*/
+/*//////////////////////// MEDIA QUERIES | MEDIA QUERIES ////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////*/
+
 /* Sizez */
 /*
   Wide-screen Desktop - 1440
@@ -183,31 +189,44 @@ nav ul {
   phone - 320
 */
 
-/* @media (max-width: 800px) {
-  #name {
-    font-size: 7rem;
-    line-height: 7rem;
-  }
-}
-*/
+/*/////////////////////////////////////////////////////////*/
+
+/* 1080px */
 
 @media (max-width: 1080px) {
+  #name {
+    text-shadow: 0 1.5px 1px rgba(0,0,0,0.5);
+    width: 100%;
+  }
+
+  #landingPageContent p {
+    text-shadow: 0 1.5px 1px rgba(0,0,0,0.5);
+  }
+
   .landingPageLink {
     box-shadow: 0 1.5px 1px rgba(0,0,0,0.5);
   }
 }
+
+/*/////////////////////////////////////////////////////////*/
+
+/* 768px */
 
 @media (max-width: 768px) {
   #name {
     font-size: 6rem;
     line-height: 6rem;
-    text-shadow: 0 1.5px 1px #000;
-    width: 100%;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+  }
+
+  #hrGroup hr, #hrGroup div {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   }
 
   #landingPageContent p {
-    width: 31rem;
-    text-shadow: 0 1px 1px #000;
+    width: 33rem;
+    font-size: 1.25rem;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.8);
   }
 
   #landingPageLinks {
@@ -217,40 +236,46 @@ nav ul {
   .landingPageLink {
     width: 9.8rem;
     height: 2.8rem;
-    box-shadow: 0 1.5px 1px rgba(0,0,0,0.5);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
   }
 
   #landingPageLinks p {
     font-size: 1.3rem;
   }
 }
+
+/*/////////////////////////////////////////////////////////*/
+
+/* 600px */
 
 @media (max-width: 600px) {
   #name {
     font-size: 5rem;
     line-height: 5rem;
-    text-shadow: 0 1.5px 1px #000;
+  }
+
+  #hrGroup {
+    width: 23rem;
+  }
+
+  #hrGroup hr {
+    width: 10rem;
+  }
+
+  #hrGroup div {
+    width: 1rem;
+    height: 1rem;
   }
 
   #landingPageContent p {
-    width: 25rem;
-    text-shadow: 0 1px 1px #000;
-  }
-
-  #landingPageLinks {
-    width: 22rem;
-  }
-
-  .landingPageLink {
-    width: 9.8rem;
-    height: 2.8rem;
-    box-shadow: 0 1.5px 1px rgba(0,0,0,0.5);
-  }
-
-  #landingPageLinks p {
-    font-size: 1.3rem;
+    width: 28rem;
+    font-size: 1.1rem;
   }
 }
+
+/*/////////////////////////////////////////////////////////*/
+
+/* 480px */
 
 @media (max-width: 480px) {
   #nav {
@@ -265,29 +290,27 @@ nav ul {
     font-size: 3.4rem;
     line-height: 3.6rem;
     margin: 0 0.5rem;
-    text-shadow: 0 1px 1px #000;
   }
 
   #hrGroup {
-    width: 20rem;
+    width: 15rem;
     margin: 0.6rem 0;
   }
 
   #hrGroup hr {
-    width: 8.5rem;
+    width: 6rem;
     margin: 0 auto;
   }
 
   #hrGroup div {
-    width: 1rem;
-    height: 1rem;
+    width: 0.85rem;
+    height: 0.85rem;
   }
 
   #landingPageContent p {
     width: 19rem;
     line-height: 1.5rem;
     font-size: 1rem;
-    text-shadow: 0 1px 1px #000;
   }
 
   #landingPageLinks {
@@ -298,7 +321,6 @@ nav ul {
   .landingPageLink {
     width: 9rem;
     height: 2.5rem;
-    box-shadow: 0 1.5px 1px rgba(0,0,0,0.5);
   }
 
   #landingPageLinks p {
@@ -306,13 +328,17 @@ nav ul {
   }
 }
 
-@media (max-width: 320px) {
-  nav ul {
-    width: 15rem;
-  }
+/*/////////////////////////////////////////////////////////*/
 
+/* 320px */
+
+@media (max-width: 320px) {
   #nav {
     font-size: 0.8rem;
+  }
+
+  nav ul {
+    width: 15rem;
   }
 
   #name {
@@ -321,17 +347,17 @@ nav ul {
   }
 
   #hrGroup {
-    width: 17rem;
-    height: 1rem;
-  }
-
-  #hrGroup div {
-    width: 0.8rem;
-    height: 0.8rem;
+    width: 13rem;
   }
 
   #hrGroup hr {
-    width: 7rem;
+    width: 5rem;
+    height: 0.2rem;
+  }
+
+  #hrGroup div {
+    width: 0.7rem;
+    height: 0.7rem;
   }
 
   #landingPageContent p {
@@ -341,8 +367,8 @@ nav ul {
   }
 
   #landingPageLinks {
-    margin: 1rem 0 0 0;
     width: 16rem;
+    margin: 1rem 0 0 0;
   }
 
   .landingPageLink {
