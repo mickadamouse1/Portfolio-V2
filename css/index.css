@@ -50,6 +50,10 @@ nav ul {
   width: 32rem;
 }
 
+nav li {
+  cursor: pointer;
+}
+
 /*////////////////////////////////////////////////////*/
 
 /* LANDING PAGE */
