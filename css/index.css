@@ -20,6 +20,20 @@ body {
 
 /*////////////////////////////////////////////////////*/
 
+/* COLOURS */
+/*
+
+#F15152 - Red-Orange
+#A4303F - Light-matte-Red
+#650D1B - Dark-Scarlet
+#5299D3 - Caronlina-Blue
+#247BA0 - Lapis-Lazuli
+#cd5c5c - Button colours (light-red)
+
+*/
+
+/*////////////////////////////////////////////////////*/
+
 /* ANIMATION TOOLS */
 
 .fadeOpacity {
@@ -38,10 +52,11 @@ body {
   align-items: center;
   width: 100%;
   font-size: 1.4rem;
-  margin: 1rem 0;
   position: fixed;
   z-index: 99999;
   transition: .5s ease;
+  background: #0000001a;
+  height: 3.5rem;
 }
 
 nav ul {
@@ -173,6 +188,52 @@ nav li {
 
 #aboutpage {
   height: 100vh;
+}
+
+#aboutMeContent {
+  background: #cd5c5c;
+  height: 24rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 0 2.5rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#aboutGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#portrait {
+  background-image: url(../images/aboutMe/portrait.jpg);
+  width: 17rem;
+  height: 16rem;
+  background-position: -1.22rem -8rem;
+  background-size: 25rem;
+  z-index: 123;
+  border-radius: 1rem;
+  border: -1px solid #333;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.6);
+}
+
+#aboutText {
+  width: 35rem;
+  text-align: justify;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+  font-size: 1.4rem;
+  padding: 0 2rem;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
+#aboutText h1 {
+  font-size: 2.5rem;
+}
+
+#aboutText p {
+
 }
 
 /*///////////////////////////////////////////////////////////////////////////////*/
