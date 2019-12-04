@@ -188,6 +188,7 @@ nav li {
 
 #aboutpage {
   height: 100vh;
+  background: #bc4949;
 }
 
 #aboutMeContent {
@@ -208,7 +209,7 @@ nav li {
 }
 
 #portrait {
-  background-image: url(../images/aboutMe/portrait.jpg);
+  background-image: url("../images/aboutMe/portrait.jpg");
   width: 17rem;
   height: 16rem;
   background-position: -1.22rem -8rem;
@@ -234,6 +235,55 @@ nav li {
 
 #aboutText p {
 
+}
+
+#aboutCardsGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 36rem;
+  width: 85rem;
+}
+
+.aboutCard {
+  width: 25%;
+  text-align: center;
+  background: #983e3e;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 0 1rem;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
+#htmlCardImg {
+  background: url("../images/icons/iconHtml.png");
+}
+
+#cssCardImg {
+  background: url("../images/icons/iconCss.png");
+}
+
+#jsCardImg {
+  background: url("../images/icons/iconJavascript.png");
+}
+
+#htmlCardImg, #cssCardImg, #jsCardImg {
+  height: 7rem;
+  width: 7rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
+.aboutCard h1 {
+  margin: 1rem 0;
 }
 
 /*///////////////////////////////////////////////////////////////////////////////*/
@@ -443,5 +493,39 @@ nav li {
 
   #landingPageLinks p {
     font-size: 0.9rem;
+  }
+
+  /*//////////////////////////////////*/
+
+  /* ABOUT ME */
+
+  #aboutMeContent {
+    height: 44.5rem;
+    width: 100%;
+  }
+
+  #aboutGroup {
+    flex-direction: column;
+  }
+
+  #aboutText {
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  #aboutText h1 {
+    margin: 1rem 0;
+  }
+
+  #aboutCardsGroup {
+    height: 98rem;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .aboutCard {
+    width: 84%;
+    margin: 1rem;
   }
 }
