@@ -61,6 +61,7 @@ nav ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin: 1rem 0 ;
 }
 
 .accreditation img {

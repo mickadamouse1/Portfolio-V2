@@ -209,8 +209,8 @@ nav li {
 }
 
 #portrait {
-  background-image: url("../images/aboutMe/portrait.jpg");
-  width: 17rem;
+  background-image: url("../images/aboutMe/portrait1.JPG");
+  width: 16rem;
   height: 16rem;
   background-position: -1.22rem -8rem;
   background-size: 25rem;
@@ -262,7 +262,11 @@ nav li {
 }
 
 #htmlCardImg {
-  background: url("../images/icons/iconHtml.png");
+  background: url("../images/icons/iconHtml2.png");
+  height: 7rem;
+  width: 7rem;
+  background-position: center;
+  background-size: cover;
 }
 
 #cssCardImg {
@@ -273,7 +277,7 @@ nav li {
   background: url("../images/icons/iconJavascript.png");
 }
 
-#htmlCardImg, #cssCardImg, #jsCardImg {
+#cssCardImg, #jsCardImg {
   height: 7rem;
   width: 7rem;
   background-position: center;
@@ -283,7 +287,7 @@ nav li {
 }
 
 .aboutCard h1 {
-  margin: 1rem 0;
+  margin: 1rem 0 0 0;
 }
 
 /*///////////////////////////////////////////////////////////////////////////////*/
@@ -441,6 +445,68 @@ nav li {
   #landingPageLinks p {
     font-size: 1.2rem;
   }
+
+  /*//////////////////////////////////*/
+
+  /* ABOUT ME */
+
+  #aboutMeContent {
+    height: 34rem;
+    width: 100%;
+  }
+
+  #aboutGroup {
+    flex-direction: column;
+  }
+
+  #portrait {
+    background-position: -0.22rem -9rem;
+    background-size: 27rem;
+    width: 84%;
+  }
+
+  #aboutText {
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  #aboutText h1 {
+    margin: 0.7rem 0;
+    font-size: 2rem;
+  }
+
+  #aboutText p {
+    font-size: 0.75rem;
+  }
+
+  #aboutCardsGroup {
+    height: 75.5rem;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .aboutCard {
+    width: 84%;
+    margin: 1rem;
+  }
+
+  .aboutCard h1 {
+    font-size: 1.8rem;
+  }
+
+  .aboutCard hr {
+    width: 7rem;
+    margin: 0.5rem;
+  }
+
+  .aboutCard p {
+    font-size: 0.75rem;
+  }
+
+  .aboutCard:hover {
+    background: #8a3838;
+  }
 }
 
 /*/////////////////////////////////////////////////////////*/
@@ -500,12 +566,17 @@ nav li {
   /* ABOUT ME */
 
   #aboutMeContent {
-    height: 44.5rem;
+    height: 34rem;
     width: 100%;
   }
 
   #aboutGroup {
     flex-direction: column;
+  }
+
+  #portrait {
+    width: 17rem;
+    height: 17rem;
   }
 
   #aboutText {
@@ -515,17 +586,44 @@ nav li {
   }
 
   #aboutText h1 {
-    margin: 1rem 0;
+    margin: 0.7rem 0;
+    font-size: 2rem;
+  }
+
+  #aboutText p {
+    font-size: 0.75rem;
   }
 
   #aboutCardsGroup {
-    height: 98rem;
+    height: 26.5rem;
     flex-direction: column;
     width: auto;
   }
 
   .aboutCard {
     width: 84%;
+    height: 90%;
     margin: 1rem;
+  }
+
+  .aboutCard h1 {
+    font-size: 1.8rem;
+  }
+
+  .aboutCard hr {
+    width: 7rem;
+    margin: 0.5rem;
+  }
+
+  .aboutCard p {
+    font-size: 0.75rem;
+  }
+
+  .aboutCard:hover {
+    background: #8a3838;
+  }
+
+  #cssCard, #jsCard {
+    display: none;
   }
 }
