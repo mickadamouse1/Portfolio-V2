@@ -9,13 +9,13 @@ html {
   margin: 0;
   text-decoration: none;
   list-style: none;
+  color: #fffafa;
 }
 
 body {
   background: #333;
   height: 100%;
   font-family: "Roboto Slab", sans-serif;
-  color: #fffafa;
 }
 
 /*////////////////////////////////////////////////////*/
@@ -237,6 +237,10 @@ nav li {
 
 }
 
+#btnGoToSkills {
+  display: none;
+}
+
 #aboutCardsGroup {
   display: flex;
   justify-content: center;
@@ -451,8 +455,9 @@ nav li {
   /* ABOUT ME */
 
   #aboutMeContent {
-    height: 34rem;
+    height: 35rem;
     width: 100%;
+    padding: 0 0 1.5rem 0;
   }
 
   #aboutGroup {
@@ -467,17 +472,30 @@ nav li {
 
   #aboutText {
     width: 100%;
-    font-size: 1.2rem;
     text-align: center;
   }
 
   #aboutText h1 {
     margin: 0.7rem 0;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   #aboutText p {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  #btnGoToSkills {
+    display: flex;
+    margin: 1.33rem auto;
+    width: 12rem;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    background: #bf3a3a;
+    border-radius: 0.6rem;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    font-size: 1.5rem;
   }
 
   #aboutCardsGroup {
