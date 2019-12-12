@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 * {
@@ -16,6 +16,13 @@ body {
   background: #333;
   height: 100%;
   font-family: "Roboto Slab", sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1140px;
 }
 
 /*////////////////////////////////////////////////////*/
@@ -166,7 +173,7 @@ nav li {
   align-items: center;
   width: 12rem;
   height: 3.2rem;
-  border-radius: 0.2rem;
+  border-radius: .25rem;
   text-decoration: none;
   margin: 0 auto;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
@@ -204,24 +211,22 @@ nav li {
 #aboutGroup {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   align-items: center;
 }
 
 #portrait {
   background-image: url("../images/aboutMe/portrait1.JPG");
-  width: 16rem;
+  width: 42rem;
   height: 16rem;
   background-position: -1.22rem -8rem;
   background-size: 25rem;
   z-index: 123;
-  border-radius: 1rem;
+  border-radius: .25rem;
   border: -1px solid #333;
   box-shadow: 0 2px 2px rgba(0,0,0,0.6);
 }
 
 #aboutText {
-  width: 35rem;
   text-align: justify;
   text-shadow: 0 1px 1px rgba(0,0,0,0.5);
   font-size: 1.4rem;
@@ -243,7 +248,6 @@ nav li {
 
 #aboutCardsGroup {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin: 0 auto;
   height: 36rem;
@@ -251,18 +255,20 @@ nav li {
 }
 
 .aboutCard {
-  width: 25%;
   text-align: center;
   background: #983e3e;
   padding: 2rem;
-  border-radius: 1rem;
-  margin: 0 1rem;
+  border-radius: .25rem;
   text-shadow: 0 1px 1px rgba(0,0,0,0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
+#cssCard {
+  margin: 0 1rem;
 }
 
 #htmlCardImg {
@@ -311,6 +317,15 @@ nav li {
   phone - 480
   phone - 320
 */
+/*/////////////////////////////////////////////////////////*/
+
+/* 1280px */
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1140px;
+  }
+}
 
 /*/////////////////////////////////////////////////////////*/
 
@@ -401,6 +416,11 @@ nav li {
 /* 480px */
 
 @media (max-width: 480px) {
+
+  .container {
+    max-width: 480px;
+  }
+
   #nav {
     font-size: 1rem;
   }
@@ -467,12 +487,12 @@ nav li {
   #portrait {
     background-position: -0.22rem -9rem;
     background-size: 27rem;
-    width: 84%;
+    width: 100%;
   }
 
   #aboutText {
-    width: 100%;
     text-align: center;
+    padding: 0;
   }
 
   #aboutText h1 {
@@ -492,7 +512,7 @@ nav li {
     justify-content: center;
     align-items: center;
     background: #bf3a3a;
-    border-radius: 0.6rem;
+    border-radius: .25rem;
     box-shadow: 0 1px 1px rgba(0,0,0,0.5);
     text-shadow: 0 1px 1px rgba(0,0,0,0.5);
     font-size: 1.5rem;
@@ -532,6 +552,11 @@ nav li {
 /* 320px */
 
 @media (max-width: 320px) {
+
+  .container {
+    max-width: 320px;
+  }
+
   #nav {
     font-size: 0.8rem;
   }
@@ -593,14 +618,11 @@ nav li {
   }
 
   #portrait {
-    width: 17rem;
     height: 17rem;
   }
 
   #aboutText {
-    width: 100%;
     font-size: 1.2rem;
-    text-align: center;
   }
 
   #aboutText h1 {
