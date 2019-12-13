@@ -18,14 +18,14 @@ window.onload = function(){
   // EVENT HANDLERS //
 
   btnLearnMore.onclick = function() {
-    scroll(getOffset(lnkAboutPage));
+    scroll(getOffset(aboutSection));
     setTimeout(function(){
       nav.classList.toggle("fadeOpacity");
     }, 550);
   }
 
   btnHome.onclick = function() {
-    scroll(getOffset(landingPage));
+    scroll(getOffset(homeSection));
     setTimeout(function() {
       nav.classList.toggle("fadeOpacity");
     }, 550);
@@ -36,6 +36,8 @@ window.onload = function(){
   // }
 
   //////////////////////////////////////////////
+
+
 
   // TOOLS //
 
@@ -48,4 +50,6 @@ window.onload = function(){
   setTimeout(function() {
     scroll(0);
   });
+
+  console.log(getOffset(aboutSection));
 }

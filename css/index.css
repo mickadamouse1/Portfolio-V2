@@ -80,7 +80,7 @@ nav li {
 
 /* LANDING PAGE */
 
-#landingPage {
+#homeSection {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,7 +88,7 @@ nav li {
   height: 100%;
 }
 
-#bkgdLandingpage {
+#bkgdHome {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -98,7 +98,7 @@ nav li {
   opacity: 0.6;
 }
 
-#landingPageContent {
+#homeContent {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -131,12 +131,12 @@ nav li {
 #hrGroup div {
   width: 1.1rem;
   height: 1.1rem;
-  background: indianred;
+  background: #dd4b4b;
   border-radius: 1rem;
   box-shadow: 0 1.5px 1px rgba(0, 0, 0, 0.35);
 }
 
-#landingPageContent hr {
+#homeContent hr {
   background: #f4f4f4;
   height: 0.25rem;
   width: 11rem;
@@ -145,7 +145,7 @@ nav li {
   border: none;
 }
 
-#landingPageContent p {
+#homeContent p {
   margin: 0 auto;
   width: 33rem;
   text-align: center;
@@ -155,18 +155,18 @@ nav li {
   text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
 }
 
-#landingPageContent span {
+#homeContent span {
   color: wheat;
 }
 
-#landingPageLinks {
+#homeLinks {
   display: flex;
   width: 29rem;
   margin: 1.5rem 0 0 0;
 }
 
-.landingPageLink {
-  background: #cd5c5c;
+.homeLink {
+  background: #dd4b4b;
   padding: 0 0.5rem;
   display: flex;
   justify-content: center;
@@ -179,11 +179,11 @@ nav li {
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
 }
 
-.landingPageLink:hover {
+.homeLink:hover {
   background: #d16a6a;
 }
 
-#landingPageLinks p {
+#homeLinks p {
   font-size: 1.5rem;
   color: #fffafa;
   font-weight: 300;
@@ -193,13 +193,8 @@ nav li {
 
 /* ABOUT PAGE */
 
-#aboutpage {
-  height: 100vh;
-  background: #bc4949;
-}
-
-#aboutMeContent {
-  background: #cd5c5c;
+#aboutSection {
+  background: #ea3e3e; /* ea3e3e / db4d4d */
   height: 24rem;
   display: flex;
   justify-content: center;
@@ -238,25 +233,60 @@ nav li {
   font-size: 2.5rem;
 }
 
-#aboutText p {
-
-}
-
 #btnGoToSkills {
   display: none;
 }
 
-#aboutCardsGroup {
+/*////////////////////////////////////////////////////*/
+
+/* SKILLS PAGE */
+
+#skillsSection {
+  background: #d33131; /* d33131 /  cb3a3a */
+  height: 37rem;
+}
+
+#skillsTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 3rem 0 0 0;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
+#skillsHrGroup {
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#skillsHrGroup div {
+  width: 1rem;
+  height: 1rem;
+  background: #dd4b4b;
+  border-radius: 100%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
+#skillsHrGroup hr {
+  width: 19rem;
+  height: .4rem;
+  background: #f4f4f4;
+  border-radius: .25;
+  margin: 0 .5rem;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
+#skillCardGroup {
   display: flex;
   align-items: center;
-  margin: 0 auto;
-  height: 36rem;
+  margin: 1.5rem auto;
   width: 85rem;
 }
 
-.aboutCard {
+.skillCard {
   text-align: center;
-  background: #983e3e;
+  background: #b12525; /* b12525 / a63030 */
   padding: 2rem;
   border-radius: .25rem;
   text-shadow: 0 1px 1px rgba(0,0,0,0.5);
@@ -296,8 +326,12 @@ nav li {
   box-shadow: 0 1px 1px rgba(0,0,0,0.5);
 }
 
-.aboutCard h1 {
+.skillCard h1 {
   margin: 1rem 0 0 0;
+}
+
+#skillCardGroup #skillsHrGroup hr {
+  width: 13rem;
 }
 
 /*///////////////////////////////////////////////////////////////////////////////*/
@@ -518,31 +552,35 @@ nav li {
     font-size: 1.5rem;
   }
 
-  #aboutCardsGroup {
+  /*//////////////////////////////////*/
+
+  /* SKILLS */
+
+  #skillCardGroup {
     height: 75.5rem;
     flex-direction: column;
     width: auto;
   }
 
-  .aboutCard {
+  .skillCard {
     width: 84%;
     margin: 1rem;
   }
 
-  .aboutCard h1 {
+  .skillCard h1 {
     font-size: 1.8rem;
   }
 
-  .aboutCard hr {
+  .skillCard hr {
     width: 7rem;
     margin: 0.5rem;
   }
 
-  .aboutCard p {
+  .skillCard p {
     font-size: 0.75rem;
   }
 
-  .aboutCard:hover {
+  .skillCard:hover {
     background: #8a3838;
   }
 }
@@ -634,32 +672,32 @@ nav li {
     font-size: 0.75rem;
   }
 
-  #aboutCardsGroup {
+  #skillCardGroup {
     height: 26.5rem;
     flex-direction: column;
     width: auto;
   }
 
-  .aboutCard {
+  .skillCard {
     width: 84%;
     height: 90%;
     margin: 1rem;
   }
 
-  .aboutCard h1 {
+  .skillCard h1 {
     font-size: 1.8rem;
   }
 
-  .aboutCard hr {
+  .skillCard hr {
     width: 7rem;
     margin: 0.5rem;
   }
 
-  .aboutCard p {
+  .skillCard p {
     font-size: 0.75rem;
   }
 
-  .aboutCard:hover {
+  .skillCard:hover {
     background: #8a3838;
   }
 
