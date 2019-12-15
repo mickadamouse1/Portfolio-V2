@@ -15,20 +15,28 @@ window.onload = function(){
 
   ///////////////////////////////////////////////
 
+  const skillsSection = document.getElementById("skillsSection");
+
   // EVENT HANDLERS //
 
   btnLearnMore.onclick = function() {
-    scroll(getOffset(aboutSection));
+    // scroll(getOffset(aboutSection)); Original Method
+    scroll(aboutSection.offsetTop); // New Method
     setTimeout(function(){
       nav.classList.toggle("fadeOpacity");
     }, 550);
   }
 
   btnHome.onclick = function() {
-    scroll(getOffset(homeSection));
+    scroll(homeSection.offsetTop);
     setTimeout(function() {
       nav.classList.toggle("fadeOpacity");
     }, 550);
+  }
+
+  btnGoToSkills.onclick = function() {
+    scroll(skillsSection.offsetTop);
+    console.log(skillsSection.offsetTop)
   }
 
   // btnAbout.onclick = function() {

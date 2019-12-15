@@ -249,7 +249,7 @@ nav li {
 #skillsTitle {
   text-align: center;
   font-size: 2.5rem;
-  padding: 3rem 0 0 0;
+  padding: 2rem 0 0 0;
   text-shadow: 0 1px 1px rgba(0,0,0,0.5);
 }
 
@@ -258,6 +258,7 @@ nav li {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: .2rem 0 2rem 0;
 }
 
 #skillsHrGroup div {
@@ -280,7 +281,6 @@ nav li {
 #skillCardGroup {
   display: flex;
   align-items: center;
-  margin: 1.5rem auto;
   width: 85rem;
 }
 
@@ -328,6 +328,10 @@ nav li {
 
 .skillCard h1 {
   margin: 1rem 0 0 0;
+}
+
+#skillCardGroup #skillsHrGroup {
+  margin: 0;
 }
 
 #skillCardGroup #skillsHrGroup hr {
@@ -603,17 +607,21 @@ nav li {
     width: 15rem;
   }
 
+  #homeContent {
+    top: 1rem;
+  }
+
   #name {
     font-size: 3rem;
     line-height: 3rem;
   }
 
   #hrGroup {
-    width: 13rem;
+    width: 90%;
   }
 
   #hrGroup hr {
-    width: 5rem;
+    width: 7rem;
     height: 0.2rem;
   }
 
@@ -622,23 +630,23 @@ nav li {
     height: 0.7rem;
   }
 
-  #landingPageContent p {
-    width: 13rem;
-    font-size: 0.75rem;
+  #homeContent p {
+    width: 100%;
+    font-size: 0.9rem;
     line-height: 1.2rem;
   }
 
-  #landingPageLinks {
-    width: 16rem;
+  #homeLinks {
+    width: 85%;
     margin: 1rem 0 0 0;
   }
 
-  .landingPageLink {
+  .homeLink {
     width: 7rem;
     height: 2.2rem;
   }
 
-  #landingPageLinks p {
+  #homeLinks p {
     font-size: 0.9rem;
   }
 
@@ -646,17 +654,17 @@ nav li {
 
   /* ABOUT ME */
 
-  #aboutMeContent {
-    height: 34rem;
+  #aboutSection {
+    height: 36rem;
     width: 100%;
-  }
-
-  #aboutGroup {
+    display: flex;
     flex-direction: column;
+    padding: 3.5rem 0 0 0;
   }
 
   #portrait {
-    height: 17rem;
+    height: 14rem;
+    background-position: -0.22 -10rem;
   }
 
   #aboutText {
@@ -669,7 +677,30 @@ nav li {
   }
 
   #aboutText p {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  #btnGoToSkills {
+    height: 3rem;
+    margin: 1.2rem auto;
+  }
+
+  #skillsSection {
+    padding: 3.5rem 0 0 0;
+  }
+
+  #skillsTitle {
+    padding: 0;
+    margin: .5rem 0;
+  }
+
+  #skillsHrGroup {
+    width: 15rem;
+    margin: 0 auto;
+  }
+
+  #skillsHrGroup hr {
+    width: 12rem;
   }
 
   #skillCardGroup {
@@ -681,7 +712,6 @@ nav li {
   .skillCard {
     width: 84%;
     height: 90%;
-    margin: 1rem;
   }
 
   .skillCard h1 {
