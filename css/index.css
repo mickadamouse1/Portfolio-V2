@@ -281,7 +281,6 @@ nav li {
 #skillCardGroup {
   display: flex;
   align-items: center;
-  width: 85rem;
 }
 
 .skillCard {
@@ -443,9 +442,22 @@ nav li {
     height: 1rem;
   }
 
-  #landingPageContent p {
+  #homeContent p {
     width: 28rem;
     font-size: 1.1rem;
+  }
+
+  #homeLinks {
+    width: 27rem;
+  }
+
+  .homeLink {
+    width: 11rem;
+    height: 3rem;
+  }
+
+  #homeLinks p {
+    font-size: 1.4rem;
   }
 }
 
@@ -488,29 +500,39 @@ nav li {
     height: 0.85rem;
   }
 
-  #landingPageContent p {
+  #homeContent p {
     width: 19rem;
     line-height: 1.5rem;
     font-size: 1rem;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   }
 
-  #landingPageLinks {
+  #homeLinks {
     width: 20rem;
     margin: 1rem 0 0 0;
   }
 
-  .landingPageLink {
+  .homeLink {
     width: 9rem;
     height: 2.5rem;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   }
 
-  #landingPageLinks p {
+  #homeLinks p {
     font-size: 1.2rem;
   }
 
   /*//////////////////////////////////*/
 
   /* ABOUT ME */
+
+  #aboutSection {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 4.5rem 0 0;
+    justify-content: flex-start;
+  }
 
   #aboutMeContent {
     height: 35rem;
@@ -539,13 +561,14 @@ nav li {
   }
 
   #aboutText p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    margin: 0.7rem 0 1.5rem;
   }
 
   #btnGoToSkills {
     display: flex;
-    margin: 1.33rem auto;
-    width: 12rem;
+    margin: 0 auto;
+    width: 17rem;
     height: 4rem;
     justify-content: center;
     align-items: center;
@@ -553,7 +576,7 @@ nav li {
     border-radius: .25rem;
     box-shadow: 0 1px 1px rgba(0,0,0,0.5);
     text-shadow: 0 1px 1px rgba(0,0,0,0.5);
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   /*//////////////////////////////////*/
@@ -567,8 +590,8 @@ nav li {
   }
 
   .skillCard {
-    width: 84%;
-    margin: 1rem;
+    width: 100%;
+    height: 75%;
   }
 
   .skillCard h1 {
@@ -596,7 +619,7 @@ nav li {
 @media (max-width: 320px) {
 
   .container {
-    max-width: 320px;
+    max-width: 319x;
   }
 
   #nav {
@@ -655,7 +678,6 @@ nav li {
   /* ABOUT ME */
 
   #aboutSection {
-    height: 36rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -682,16 +704,24 @@ nav li {
 
   #btnGoToSkills {
     height: 3rem;
+    width: 12rem;
     margin: 1.2rem auto;
+    font-size: 1.5rem;
   }
 
+  /*//////////////////////////////////*/
+
+  /* SKILLS */
+
   #skillsSection {
-    padding: 3.5rem 0 0 0;
+    padding: 3.5rem 0 1.4rem;
+    height: auto;
   }
 
   #skillsTitle {
     padding: 0;
-    margin: .5rem 0;
+    margin: .5rem 0 .2rem;
+    font-size: 2rem;
   }
 
   #skillsHrGroup {
@@ -703,15 +733,25 @@ nav li {
     width: 12rem;
   }
 
+  #nextSkill {
+    text-align: center;
+  }
+
   #skillCardGroup {
-    height: 26.5rem;
+    height: auto;
     flex-direction: column;
     width: auto;
   }
 
   .skillCard {
-    width: 84%;
-    height: 90%;
+    width: 100%;
+    height: 75%;
+    margin: .8rem 0;
+  }
+
+  #htmlCardImg {
+    width: 5rem;
+    height: 5rem;
   }
 
   .skillCard h1 {
@@ -733,5 +773,19 @@ nav li {
 
   #cssCard, #jsCard {
     display: none;
+  }
+
+  #btnGoToProjects {
+    display: flex;
+    margin: 0 auto;
+    width: 12rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    background: #b12525;
+    border-radius: .25rem;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    font-size: 1.5rem;
   }
 }
