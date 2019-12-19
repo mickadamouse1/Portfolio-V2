@@ -22,9 +22,11 @@ window.onload = function(){
   btnLearnMore.onclick = function() {
     // scroll(getOffset(aboutSection)); Original Method
     scroll(aboutSection.offsetTop); // New Method
-    setTimeout(function(){
-      nav.classList.toggle("fadeOpacity");
-    }, 550);
+    if (nav.classList.contains("fadeOpacity")) {
+      setTimeout(function(){
+        nav.classList.toggle("fadeOpacity");
+      }, 550);
+    }
   }
 
   btnHome.onclick = function() {
