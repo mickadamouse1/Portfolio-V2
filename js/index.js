@@ -13,6 +13,16 @@ window.onload = function(){
     });
   }
 
+  setInterval(function(){
+    if (window.pageYOffset >= 568 && nav.classList.contains("fadeOpacity")) {
+      nav.classList.toggle("fadeOpacity");
+    } else if (window.pageYOffset < 568 && !nav.classList.contains("fadeOpacity")) {
+      nav.classList.toggle("fadeOpacity");
+    }
+  }, 500);
+
+
+
   ///////////////////////////////////////////////
 
   const skillsSection = document.getElementById("skillsSection");
