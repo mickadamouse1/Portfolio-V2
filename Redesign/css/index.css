@@ -1,0 +1,86 @@
+html {
+  height: 100%;
+  overflow: visible;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  color: #fffafa;
+}
+
+body {
+  background: #212529;
+  height: 100%;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+/* /////////////////////////////////////////////////// */
+
+/* NAVIGATION BAR */
+
+/* Globals */
+
+.active {
+  color: #212529;
+}
+
+/* Non-Gobals */
+
+nav {
+  background: #fff;
+  height: 5.5em;
+  display: flex;
+  font-weight: 500;
+}
+
+#navGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav #brand {
+  font-size: 1.8em;
+  font-weight: 300;
+  color: #212529;
+}
+
+nav ul {
+  display: flex;
+  position: relative;
+}
+
+nav ul li a {
+  margin: 0 1em;
+  color: #21252987;
+}
+
+#btnContactMe {
+  background: #20c997;
+  color: white;
+  padding: 0.4em .8em;
+}
+
+/* Animation */
+
+#underline {
+  width: 2.5em;
+  height: .15em;
+  background: #212529;
+  border: none;
+  position: absolute;
+  top: 1.35em;
+  left: 1.2em;
+  transition: .5s ease;
+}
