@@ -14,6 +14,7 @@ html {
 
 body {
   background: #212529;
+  background: #15202b;
   height: 100%;
   font-family: "Raleway", sans-serif;
 }
@@ -127,6 +128,24 @@ nav ul li a {
 
 #groupAboutText p {
   width: 43em;
+}
+
+#groupMediaLinks {
+  margin: .7em 0 0 0;
+  width: 11em;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.mediaLinks {
+  font-size: 2.5em;
+}
+
+.mediaLinks:hover {
+  cursor: pointer;
+  color: #20c997;
 }
 
 /* /////////////////////////////////////////////////// */

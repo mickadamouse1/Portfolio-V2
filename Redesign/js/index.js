@@ -27,6 +27,18 @@ window.onload = () => {
     applyActiveStyle(btnProjects);
   }
 
+  iconLinkedin.onclick = function() {
+    window.open("https://www.linkedin.com/in/michael-chambers-31500219a/");
+  }
+
+  iconInstagram.onclick = function() {
+    window.open("https://www.instagram.com/michaelsdev/");
+  }
+
+  // iconLinkedin.onclick = function() {
+  //   window.open("https://www.linkedin.com/in/michael-chambers-31500219a/");
+  // }
+
   const applyActiveStyle = (element) => {
     const arr = [btnHome, btnAbout, btnSkills, btnProjects];
     for (var i = 0; i < arr.length; i++) {
