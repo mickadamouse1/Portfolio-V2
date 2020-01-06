@@ -1,75 +1,52 @@
-window.onload = function(){
+window.onload = () => {
   const btnHome = document.getElementById("btnHome");
   const btnAbout = document.getElementById("btnAbout");
+  const btnSkills = document.getElementById("btnSkills");
   const btnProjects = document.getElementById("btnProjects");
-  const btnContact = document.getElementById("btnContact");
-  const btnLearnMore = document.getElementById("btnLearnMore");
-  const nav = document.getElementById("nav");
+  const btnContactMe = document.getElementById("btnContactMe");
 
-  const scroll = (top) => {
-    window.scrollTo({
-      top: top,
-      behavior: 'smooth'
-    });
-  }
-
-  setInterval(function(){
-    if (window.pageYOffset >= 568 && nav.classList.contains("fadeOpacity")) {
-      nav.classList.toggle("fadeOpacity");
-    } else if (window.pageYOffset < 568 && !nav.classList.contains("fadeOpacity")) {
-      nav.classList.toggle("fadeOpacity");
-    }
-  }, 500);
-
-
-
-  ///////////////////////////////////////////////
-
-  const skillsSection = document.getElementById("skillsSection");
-
-  // EVENT HANDLERS //
-
-  btnLearnMore.onclick = function() {
-    // scroll(getOffset(aboutSection)); Original Method
-    scroll(aboutSection.offsetTop); // New Method
-    if (nav.classList.contains("fadeOpacity")) {
-      setTimeout(function(){
-        nav.classList.toggle("fadeOpacity");
-      }, 550);
-    }
-  }
+  const navUnderline = document.getElementById("underline");
 
   btnHome.onclick = function() {
-    scroll(homeSection.offsetTop);
-    setTimeout(function() {
-      nav.classList.toggle("fadeOpacity");
-    }, 550);
+    navUnderline.style.left = "1.2em";
+    applyActiveStyle(btnHome);
   }
 
-  btnGoToSkills.onclick = function() {
-    scroll(skillsSection.offsetTop);
-    console.log(skillsSection.offsetTop)
+  btnAbout.onclick = function() {
+    navUnderline.style.left = "6em";
+    applyActiveStyle(btnAbout);
   }
 
-  // btnAbout.onclick = function() {
-  //   scoll(get)
+  btnSkills.onclick = function() {
+    navUnderline.style.left = "10.7em";
+    applyActiveStyle(btnSkills);
+  }
+
+  btnProjects.onclick = function() {
+    navUnderline.style.left = "15.7em";
+    applyActiveStyle(btnProjects);
+  }
+
+  iconLinkedin.onclick = function() {
+    window.open("https://www.linkedin.com/in/michael-chambers-31500219a/");
+  }
+
+  iconInstagram.onclick = function() {
+    window.open("https://www.instagram.com/michaelsdev/");
+  }
+
+  // iconLinkedin.onclick = function() {
+  //   window.open("https://www.linkedin.com/in/michael-chambers-31500219a/");
   // }
 
-  //////////////////////////////////////////////
-
-
-
-  // TOOLS //
-
-  // Find location of element (Y-axis)
-  const getOffset = (element) => {
-    return element.getBoundingClientRect().top;
+  const applyActiveStyle = (element) => {
+    const arr = [btnHome, btnAbout, btnSkills, btnProjects];
+    for (var i = 0; i < arr.length; i++) {
+      arr[i].classList.remove("active");
+    }
+    if (!element.classList.contains("active")) element.classList.toggle("active");
   }
 
-  // when page loads, scroll to top.
-  setTimeout(function() {
-    scroll(0);
-  });
+  // 1.2 - 6 - 10.7 - 15.7
 
-  console.log(getOffset(aboutSection));
 }

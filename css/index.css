@@ -13,833 +13,176 @@ html {
 }
 
 body {
-  background: #333;
+  background: #212529;
+  background: #15202b;
   height: 100%;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .container {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: 1170px;
 }
 
-/*////////////////////////////////////////////////////*/
-
-/* COLOURS */
-/*
-
-#F15152 - Red-Orange
-#A4303F - Light-matte-Red
-#650D1B - Dark-Scarlet
-#5299D3 - Caronlina-Blue
-#247BA0 - Lapis-Lazuli
-#cd5c5c - Button colours (light-red)
-
-*/
-
-/*////////////////////////////////////////////////////*/
-
-/* ANIMATION TOOLS */
-
-.fadeOpacity {
-  opacity: 0;
-}
-
-
-/*////////////////////////////////////////////////////*/
+/* /////////////////////////////////////////////////// */
 
 /* NAVIGATION BAR */
 
-#nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  font-size: 1.4rem;
-  position: fixed;
-  z-index: 99999;
-  transition: .5s ease;
-  background: #0000001a;
-  height: 3.5rem;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+/* Globals */
+
+.active {
+  color: #212529;
 }
 
-#nav div {
+/* Non-Gobals */
+
+nav {
+  background: #fff;
+  height: 6em;
   display: flex;
-  justify-content: center;
+  font-weight: 500;
+}
+
+#navGroup {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+nav #brand {
+  font-size: 1.8em;
+  font-weight: 300;
+  color: #212529;
 }
 
 nav ul {
   display: flex;
-  justify-content: space-around;
-  width: 32rem;
-}
-
-nav li {
-  cursor: pointer;
-}
-
-/*////////////////////////////////////////////////////*/
-
-/* LANDING PAGE */
-
-#homeSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-}
-
-#bkgdHome {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url("../images/17.jpg");
-  background-position: center;
-  background-size: cover;
-  opacity: 0.6;
-}
-
-#homeContent {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  top: -3rem;
 }
 
-#name {
-  color: snow;
-  font-size: 8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  width: 50rem;
-  text-align: center;
-  line-height: 8rem;
-  margin: 0.5rem;
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+nav ul li a {
+  margin: 0 1em;
+  color: #212529ad;
 }
 
-#hrGroup {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 27rem;
-  margin: 0 auto;
+#btnContactMe {
+  background: #20c997;
+  color: white;
+  padding: 0.4em .8em;
 }
 
-#hrGroup div {
-  width: 1.1rem;
-  height: 1.1rem;
-  background: #dd4b4b;
-  border-radius: 1rem;
-  box-shadow: 0 1.5px 1px rgba(0, 0, 0, 0.35);
-}
+/* Animation */
 
-#homeContent hr {
-  background: #f4f4f4;
-  height: 0.25rem;
-  width: 11rem;
-  margin: 1rem auto;
-  box-shadow: 0 1.5px 1px rgba(0, 0, 0, 0.35);
+#underline {
+  width: 2.5em;
+  height: .15em;
+  background: #212529;
   border: none;
+  position: absolute;
+  top: 1.35em;
+  left: 1.2em;
+  transition: .5s ease;
 }
 
-#homeContent p {
-  margin: 0 auto;
-  width: 33rem;
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 300;
-  line-height: 1.8rem;
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
-}
+/* /////////////////////////////////////////////////// */
 
-#homeContent span {
-  color: wheat;
-}
+/* ABOUT ME */
 
-#homeLinks {
-  display: flex;
-  width: 29rem;
-  margin: 1.5rem 0 0 0;
-}
-
-.homeLink {
-  background: #dd4b4b;
-  padding: 0 0.5rem;
+#sectionAboutMe {
+  height: 25em;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 12rem;
-  height: 3.2rem;
-  border-radius: .25rem;
-  text-decoration: none;
-  margin: 0 auto;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
 }
 
-.homeLink:hover {
-  background: #d16a6a;
-}
-
-#homeLinks p {
-  font-size: 1.5rem;
-  color: #fffafa;
-  font-weight: 300;
-}
-
-/*////////////////////////////////////////////////////*/
-
-/* ABOUT PAGE */
-
-#aboutSection {
-  background: #ea3e3e; /* f03838 / db4d4d */
-  height: 24rem;
+.groupAboutMe {
   display: flex;
   justify-content: center;
-  padding: 0 0 2.5rem 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  background-image: url("../images/textures/arches.png");
-  background-position: center;
-  background-size: 5rem;
-}
-
-#aboutGroup {
-  display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
 #portrait {
-  background-image: url("../images/aboutMe/portrait1.JPG");
-  width: 42rem;
-  height: 16rem;
-  background-position: -1.22rem -8rem;
-  background-size: 25rem;
-  z-index: 123;
-  border-radius: .25rem;
-  border: -1px solid #333;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.5);
-}
-
-#aboutText {
-  text-align: justify;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
-  font-size: 1.4rem;
-  padding: 0 2rem;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
-}
-
-#aboutText h1 {
-  font-size: 2.5rem;
-}
-
-/* Mobile Features (Hidden) */
-
-#btnGoToSkills, #nextSkill, #btnGoToProjects {
-  display: none;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
-  margin: 0 auto;
-}
-
-#btnGoToSkills, #btnGoToProjects {
-  box-shadow: 0 1px 1px rgba(0,0,0,0.5);
-  border-radius: .25rem;
-  justify-content: center;
-  align-items: center;
-}
-
-#btnGoToSkills {
-  background: #da2b2b;
-}
-
-#btnGoToProjects {
-  background: #bd2828;
-}
-
-/*////////////////////////////////////////////////////*/
-
-/* SKILLS PAGE */
-
-#skillsSection {
-  background: #cd3737; /* d33131 /  cb3a3a */
-  height: 37rem;
-  background-image: url("../images/textures/arches.png");
+  background: url("../images/aboutMe/portrait3.jpg");
+  height: 20em;
+  width: 20em;
   background-position: center;
-  background-size: 5rem;
+  background-size: cover;
+  border-radius: .25em;
 }
 
-#skillsTitle {
-  text-align: center;
-  font-size: 2.5rem;
-  padding: 2rem 0 0 0;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
-}
-
-#skillCardGroup {
-  display: flex;
-  align-items: center;
-}
-
-.skillCard {
-  text-align: center;
-  background: #bd2828; /* b12525 / a63030 */
-  padding: 2rem;
-  border-radius: .25rem;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
-  display: flex;
+#groupAboutText {
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+  align-items: flex-start;
+  margin: 0 0 0 1.6em;
 }
 
-.cardTexture {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/textures/arches.png");
+#groupAboutText h1 {
+  font-size: 7em;
 }
 
-#cssCard {
-  margin: 0 1rem;
+#groupAboutText h1 span {
+  color: #20c997;
 }
 
-#htmlCardImg {
-  background: url("../images/icons/iconHtml2.png");
-  height: 7rem;
-  width: 7rem;
-  background-position: center;
-  background-size: cover;
+#groupAboutText p {
+  width: 37.7em;
+  padding: 0 0 0 .35em;
+  font-size: 1.1em;
 }
 
-#cssCardImg {
-  background: url("../images/icons/iconCss.png");
-}
-
-#jsCardImg {
-  background: url("../images/icons/iconJavascript.png");
-}
-
-#cssCardImg, #jsCardImg {
-  height: 7rem;
-  width: 7rem;
-  background-position: center;
-  background-size: cover;
-  border-radius: 100%;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.5);
-}
-
-.skillCard h1 {
-  margin: 1rem 0 0 0;
-}
-
-/* HR Groups */
-
-#skillsSection hr {
-  background: #f4f4f4;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.5);
-  border: none;
-  border-radius: .2rem;
-}
-
-#skillsHrGroup div, #skillCardHrGroup div {
-  border-radius: 100%;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.5);
-}
-
-#skillsHrGroup, #skillCardHrGroup {
+#groupMediaLinks {
+  margin: 1.1em 0 0 .4em;
+  width: 11em;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.mediaLinks {
+  font-size: 2.5em;
+}
+
+.mediaLinks:hover {
+  cursor: pointer;
+  color: #20c997;
+}
+
+/* /////////////////////////////////////////////////// */
+
+/* SKILLS */
+
+#sectionSkills {
+  height: 100%;
+  background: #fff;
+}
+
+#groupSkillsIntro {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#skillsHrGroup {
-  margin: .2rem 0 2rem 0;
+#groupSkillsIntro h1, #groupSkillsIntro p {
+  color: #212529;
 }
 
-#skillsHrGroup div {
-  background: #ff4d4d;
-  width: .75rem;
-  height: .75rem;
+#groupSkillsIntro h1 {
+  margin-top: 2em;
+  font-size: 2em;
 }
 
-#skillsHrGroup hr {
-  width: 19rem;
-  height: .3rem;
-  border-radius: .25;
-  margin: 0 .5rem;
+#groupSkillsIntro hr {
+  height: .2em;
+  background: #212529;
+  border: none;
+  width: 8em;
+  margin: 1em 0;
 }
 
-#skillCardHrGroup {
-  margin: 0;
-  width: 8rem;
-}
-
-#skillCardHrGroup hr {
-  width: 6rem;
-  height: .2rem;
-}
-
-#skillCardHrGroup div {
-  width: .5rem;
-  height: .5rem;
-  background: #a91d1d;
-}
-
-/*///////////////////////////////////////////////////////////////////////////////*/
-/*//////////////////////// MEDIA QUERIES | MEDIA QUERIES ////////////////////////*/
-/*//////////////////////// MEDIA QUERIES | MEDIA QUERIES ////////////////////////*/
-/*//////////////////////// MEDIA QUERIES | MEDIA QUERIES ////////////////////////*/
-/*///////////////////////////////////////////////////////////////////////////////*/
-
-/* Sizez */
-/*
-  Wide-screen Desktop - 1440
-  Desktop - 1280
-  Large tablet - 1080
-  landscape phone/tablet - 800
-  large tablet - 768
-  small tablet - 600
-  phone - 480
-  phone - 320
-*/
-/*/////////////////////////////////////////////////////////*/
-
-/* 1280px */
-
-@media (max-width: 1280px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-/*/////////////////////////////////////////////////////////*/
-
-/* 1080px */
-
-@media (max-width: 1080px) {
-
-  #homeContent {
-    top: 0;
-  }
-
-  #name {
-    text-shadow: 0 1.5px 1px rgba(0,0,0,0.5);
-    width: 100%;
-  }
-
-  #landingPageContent p {
-    text-shadow: 0 1.5px 1px rgba(0,0,0,0.5);
-  }
-
-  .landingPageLink {
-    box-shadow: 0 1.5px 1px rgba(0,0,0,0.5);
-  }
-}
-
-/*/////////////////////////////////////////////////////////*/
-
-/* 768px */
-
-@media (max-width: 768px) {
-  #name {
-    font-size: 6rem;
-    line-height: 6rem;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.8);
-  }
-
-  #hrGroup hr, #hrGroup div {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-  }
-
-  #landingPageContent p {
-    width: 33rem;
-    font-size: 1.25rem;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.8);
-  }
-
-  #landingPageLinks {
-    width: 22rem;
-  }
-
-  .landingPageLink {
-    width: 9.8rem;
-    height: 2.8rem;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
-  }
-
-  #landingPageLinks p {
-    font-size: 1.3rem;
-  }
-
-  /* SKILLS */
-
-  .skillCard, #btnGoToProjects {
-    background: #221E22;
-  }
-}
-
-/*/////////////////////////////////////////////////////////*/
-
-/* 600px */
-
-@media (max-width: 600px) {
-  #name {
-    font-size: 5rem;
-    line-height: 5rem;
-  }
-
-  #hrGroup {
-    width: 23rem;
-  }
-
-  #hrGroup hr {
-    width: 10rem;
-  }
-
-  #hrGroup div {
-    width: 1rem;
-    height: 1rem;
-  }
-
-  #homeContent p {
-    width: 28rem;
-    font-size: 1.1rem;
-  }
-
-  #homeLinks {
-    width: 27rem;
-  }
-
-  .homeLink {
-    width: 11rem;
-    height: 3rem;
-  }
-
-  #homeLinks p {
-    font-size: 1.4rem;
-  }
-}
-
-/*/////////////////////////////////////////////////////////*/
-
-/* 480px */
-
-@media (max-width: 480px) {
-
-  .container {
-    max-width: 480px;
-  }
-
-  #nav {
-    font-size: 1.15rem;
-  }
-
-  nav ul {
-    width: 20rem;
-  }
-
-  #name {
-    font-size: 3.4rem;
-    line-height: 3.6rem;
-    margin: 0 0.5rem;
-  }
-
-  #hrGroup {
-    width: 15rem;
-    margin: 0.6rem 0;
-  }
-
-  #hrGroup hr {
-    width: 6rem;
-    margin: 0 auto;
-  }
-
-  #hrGroup div {
-    width: 0.85rem;
-    height: 0.85rem;
-  }
-
-  #homeContent p {
-    width: 19rem;
-    line-height: 1.5rem;
-    font-size: 1rem;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-  }
-
-  #homeLinks {
-    width: 20rem;
-    margin: 1rem 0 0 0;
-  }
-
-  .homeLink {
-    width: 9rem;
-    height: 2.5rem;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-  }
-
-  #homeLinks p {
-    font-size: 1.2rem;
-  }
-
-  /*//////////////////////////////////*/
-
-  /* ABOUT ME */
-
-  #aboutSection {
-    height: 42rem;
-    display: flex;
-    flex-direction: column;
-    padding: 4rem 0 1.4rem 0;
-  }
-
-  #aboutMeContent {
-    height: 35rem;
-    width: 100%;
-    padding: 0 0 1.5rem 0;
-  }
-
-  #aboutGroup {
-    flex-direction: column;
-  }
-
-  #portrait {
-    background-position: -0.22rem -9rem;
-    background-size: 27rem;
-    width: 100%;
-  }
-
-  #aboutText {
-    text-align: center;
-    padding: 0;
-  }
-
-  #aboutText h1 {
-    margin: 0.7rem 0;
-    font-size: 3rem;
-  }
-
-  #aboutText p {
-    font-size: 1.1rem;
-    margin: 0.7rem 0 1.5rem;
-  }
-
-  #btnGoToSkills {
-    display: flex;
-    margin: 0 auto;
-    width: 17rem;
-    height: 4rem;
-    font-size: 1.7rem;
-  }
-
-  /*//////////////////////////////////*/
-
-  /* SKILLS */
-
-  #skillsSection {
-    padding: 4rem 0 1.4rem;
-    height: 42rem;
-  }
-
-  #skillsTitle {
-    padding: 0;
-  }
-
-  #skillsHrGroup {
-    margin: 0 auto;
-    width: 16rem;
-  }
-
-  #skillsHrGroup hr {
-    width: 13.5rem;
-  }
-
-  #nextSkill {
-    text-align: center;
-    display: block;
-  }
-
-  #skillCardGroup {
-    height: auto;
-    flex-direction: column;
-    width: auto;
-  }
-
-  .skillCard {
-    width: 100%;
-    height: 75%;
-    margin: .85rem 0;
-  }
-
-  .skillCard h1 {
-    font-size: 2.8rem;
-  }
-
-  .skillCard hr {
-    width: 7rem;
-    margin: 0.5rem;
-  }
-
-  .skillCard p {
-    font-size: 1rem;
-  }
-
-  #htmlCard:hover {
-    background: #221E22;
-  }
-
-  #cssCard, #jsCard {
-    display: none;
-  }
-
-  #btnGoToProjects {
-    display: flex;
-    margin: 0 auto;
-    width: 12rem;
-    height: 3rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: .25rem;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
-    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
-    font-size: 1.5rem;
-  }
-}
-
-/*/////////////////////////////////////////////////////////*/
-
-/* 320px */
-
-@media (max-width: 320px) {
-
-  .container {
-    max-width: 320px;
-  }
-
-  #aboutSection, #skillsSection {
-    height: 35.5rem;
-  }
-
-  #nav {
-    font-size: 1rem;
-  }
-
-  nav ul {
-    width: 100%;
-  }
-
-  #name {
-    font-size: 3rem;
-    line-height: 3rem;
-  }
-
-  #hrGroup {
-    width: 90%;
-  }
-
-  #hrGroup hr {
-    width: 7rem;
-    height: 0.2rem;
-  }
-
-  #hrGroup div {
-    width: 0.7rem;
-    height: 0.7rem;
-  }
-
-  #homeContent p {
-    width: 100%;
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-  }
-
-  #homeLinks {
-    width: 85%;
-    margin: 1rem 0 0 0;
-  }
-
-  .homeLink {
-    width: 7rem;
-    height: 2.2rem;
-  }
-
-  #homeLinks p {
-    font-size: 0.9rem;
-  }
-
-  /*//////////////////////////////////*/
-
-  /* ABOUT ME */
-
-  #aboutSection {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #portrait {
-    height: 14rem;
-    background-position: -0.22 -10rem;
-  }
-
-  #aboutText {
-    font-size: 1.2rem;
-  }
-
-  #aboutText h1 {
-    margin: 0.7rem 0;
-    font-size: 2rem;
-  }
-
-  #aboutText p {
-    font-size: 0.9rem;
-  }
-
-  #btnGoToSkills {
-    height: 3rem;
-    width: 12rem;
-    font-size: 1.5rem;
-  }
-
-  /*//////////////////////////////////*/
-
-  /* SKILLS */
-
-  #skillsTitle {
-    font-size: 2rem;
-  }
-
-  #skillsHrGroup {
-    width: 15rem;
-  }
-
-  #skillsHrGroup hr {
-    width: 12rem;
-  }
-
-  #htmlCardImg {
-    width: 5rem;
-    height: 5rem;
-  }
-
-  .skillCard h1 {
-    font-size: 1.8rem;
-  }
-
-  .skillCard p {
-    font-size: 0.75rem;
-  }
-
-  #btnGoToProjects {
-
-  }
+#groupSkillsIntro p {
+  width: 33em;
+  text-align: center;
+  font-size: 1.1em;
 }

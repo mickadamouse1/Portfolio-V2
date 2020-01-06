@@ -6,91 +6,49 @@
     <script src="https://kit.fontawesome.com/11d3a90f73.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:500|Poppins|Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="icon" href="images/icons/iconTitle.png">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/11d3a90f73.js" crossorigin="anonymous"></script>
     <title>Michael Chambers</title>
   </head>
   <body>
 
-    <nav id="nav" class="fadeOpacity">
-      <div class="container">
+    <nav>
+      <div id="navGroup" class="container">
+
+        <h1 id="brand">M. Chambers.</h1>
+
         <ul>
-          <li id="btnHome">Home</li>
-          <li id="btnAbout">About</li>
-          <li id="btnProjects">Projects</li>
-          <li id="btnContact">Contact</li>
+          <li><a id="btnHome" class="active" href="#">Home</a></li>
+          <li><a id="btnAbout" href="#">About</a></li>
+          <li><a id="btnSkills" href="#">Skills</a></li>
+          <li><a id="btnProjects" href="#">Projects</a></li>
+          <li><a id="btnContactMe" href="#">Contact Me</a></li>
+          <hr id="underline">
         </ul>
+
       </div>
     </nav>
 
-    <section id="homeSection">
-      <div id="bkgdHome"></div>
-      <div id="homeContent" class="container">
-        <h1 id="name">Michael Chambers</h1>
-        <div id="hrGroup">
-          <hr>
-          <div></div>
-          <hr>
-        </div>
-        <p>I'm a <span>Software Developer</span>, <span>Musician</span>, <span>Teacher</span> and <span>Passionate Learner</span>. Take a Scroll With Me, Let's Talk.</p>
-        <div id="homeLinks">
-          <a id="btnLearnMore" class="homeLink" href="#"><p>Learn More</p></a>
-          <a id="btnViewProjects" class="homeLink" href="#"><p>View Projects</p></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="aboutSection">
-      <div id="aboutGroup" class="container">
+    <section id="sectionAboutMe" class="container">
+      <div class="groupAboutMe">
         <div id="portrait"></div>
-        <div id="aboutText">
-          <h1>Hey there!</h1>
-          <p>The name's Michael Chambers; A self-taught Software Developer who's had a passion for programming ever since the very first bug... (printed "Hellod Worl"). I'm a cheery guy who simply just wants to build projects and fix those pesky bugs!</p>
+      </div>
+      <div id="groupAboutText" class="groupAboutMe">
+        <h1>I am <span>Michael</span></h1>
+        <p>The name's Michael Chambers; A self-taught Software Developer who's had a passion for programming ever since the very first bug... (printed "Hellod Worl"). I'm a cheery guy who simply just wants to build projects and fix those pesky bugs!</p>
+        <div id="groupMediaLinks">
+          <i id="iconLinkedin" class="fab fa-linkedin mediaLinks"></i>
+          <i id="iconInstagram" class="fab fa-instagram mediaLinks"></i>
+          <i id="iconContact" class="far fa-address-card mediaLinks"></i>
         </div>
       </div>
-      <a id="btnGoToSkills">Go to Skills</a>
     </section>
 
-    <section id="skillsSection">
-      <div class="container">
-        <h1 id="skillsTitle">Oh Look, Skills!</h1>
-        <div id="skillsHrGroup">
-          <div></div>
-          <hr>
-          <div></div>
-        </div>
-        <p id="nextSkill">Press to see next skill</p>
-        <div id="skillCardGroup">
-          <div id="htmlCard" class="skillCard">
-            <div id="htmlCardImg" class="skillCardImg"></div>
-            <h1>HTML</h1>
-            <div id="skillCardHrGroup">
-              <div></div>
-              <hr>
-              <div></div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-          <div id="cssCard" class="skillCard">
-            <div id="cssCardImg" class="skillCardImg"></div>
-            <h1>CSS</h1>
-            <div id="skillsHrGroup">
-              <div></div>
-              <hr>
-              <div></div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-          <div id="jsCard" class="skillCard">
-            <div id="jsCardImg" class="skillCardImg"></div>
-            <h1>JS</h1>
-            <div id="skillsHrGroup">
-              <div></div>
-              <hr>
-              <div></div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-        </div>
-        <a id="btnGoToProjects">Go to Projects</a>
+    <section id="sectionSkills">
+      <div id="groupSkillsIntro">
+        <h1>MY SKILLS</h1>
+        <hr>
+        <p>With 2 years of self-taught development experience, I am comfortable with building applications of various scales and complexity. Below is a brief overview of my current skillset. </p>
       </div>
     </section>
 
