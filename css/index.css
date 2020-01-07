@@ -154,7 +154,7 @@ nav ul li a {
 
 #sectionSkills {
   height: 100%;
-  background: #fff;
+  background: #f4f4f4;
 }
 
 #groupSkillsIntro {
@@ -186,3 +186,48 @@ nav ul li a {
   text-align: center;
   font-size: 1.1em;
 }
+
+#groupSkills {
+  height: 37em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillCard {
+  background: #fff;
+  width: 20em;
+  height: 20em;
+  border-radius: .25em;
+  box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillCard h1, .skillCard li {
+  color: #15202b;
+}
+
+#htmlCard i {
+  color: #fff;
+  background: #20c997;
+  width: 5rem;
+  height: 5rem;
+  font-size: 3em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -2.5rem;
+}
+
+.skillCard h1 {
+  font-weight: 300;
+  font-size: 2em;
+}
+
+/*////////////*/
