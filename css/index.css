@@ -190,7 +190,7 @@ nav ul li a {
 #groupSkills {
   height: 37em;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -207,7 +207,7 @@ nav ul li a {
   align-items: center;
 }
 
-.skillCard h1, .skillCard li {
+.skillCard h1, .skillCard p, .skillCard b {
   color: #15202b;
 }
 
@@ -216,7 +216,6 @@ nav ul li a {
   background: #20c997;
   width: 5rem;
   height: 5rem;
-  font-size: 3em;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -227,7 +226,32 @@ nav ul li a {
 
 .skillCard h1 {
   font-weight: 300;
-  font-size: 2em;
+  font-size: 2.2em;
+  margin: 1em 0 0;
+}
+
+.skillCard hr {
+  width: 3em;
+  height: .11em;
+  background: #212529;
+  border: none;
+  margin: 1em;
+}
+
+.skillCard p {
+  text-align: center;
+  width: 80%;
+  font-size: 1.1em;
+}
+
+#iconHTML, #iconCSS {
+  padding: .13em 0 0;
+  font-size: 3.5em;
+}
+
+#iconJS {
+  padding: 0;
+  font-size: 3.1em;
 }
 
 /*////////////*/
