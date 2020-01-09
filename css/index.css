@@ -169,8 +169,8 @@ nav ul li a {
 }
 
 #groupSkillsIntro h1 {
-  margin-top: 2em;
-  font-size: 2em;
+  margin-top: 1.5em;
+  font-size: 3em;
 }
 
 #groupSkillsIntro hr {
@@ -188,16 +188,25 @@ nav ul li a {
 }
 
 #groupSkills {
-  height: 37em;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  margin: 2em 0;
+}
+
+#groupSkills #tip {
+  color: #000000a3;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5em;
 }
 
 .skillCard {
   background: #fff;
   width: 20em;
   height: 20em;
+  margin: 4em 0 2em;
   border-radius: .25em;
   box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.1);
   position: relative;
@@ -211,7 +220,7 @@ nav ul li a {
   color: #15202b;
 }
 
-#htmlCard i {
+.skillCard i {
   color: #fff;
   background: #20c997;
   width: 5rem;
@@ -250,8 +259,16 @@ nav ul li a {
 }
 
 #iconJS {
-  padding: 0;
-  font-size: 3.1em;
+  padding: .05em 0 0;
+  font-size: 2.8em;
+}
+
+#groupSkills h1 {
+  color: #212529;
+  font-weight: 300;
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
 }
 
 /*////////////*/
