@@ -35,9 +35,13 @@ window.onload = () => {
     window.open("https://www.instagram.com/michaelsdev/");
   }
 
-  // iconLinkedin.onclick = function() {
-  //   window.open("https://www.linkedin.com/in/michael-chambers-31500219a/");
-  // }
+  iconGithub.onclick = function() {
+    window.open("https://github.com/mickadamouse1");
+  }
+
+  btnSkillsDropDownArrow.onclick = function() {
+    groupSkillsLearning.classList.toggle("skillsExpanded");
+  }
 
   const applyActiveStyle = (element) => {
     const arr = [btnHome, btnAbout, btnSkills, btnProjects];
