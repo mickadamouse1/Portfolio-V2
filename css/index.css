@@ -16,7 +16,7 @@ body {
   background: #212529;
   background: #15202b;
   height: 100%;
-  font-family: "Raleway", sans-serif;
+  font-family: "Kurale", "Raleway", sans-serif;
 }
 
 .container {
@@ -104,7 +104,7 @@ nav ul li a {
 }
 
 #portrait {
-  background: url("../images/aboutMe/portrait3.jpg");
+  background: url("../images/aboutMe/portrait.jpg");
   height: 20em;
   width: 20em;
   background-position: center;
@@ -128,13 +128,13 @@ nav ul li a {
 
 #groupAboutText p {
   width: 37.7em;
-  padding: 0 0 0 .35em;
+  padding: 0 0 0 .5em;
   font-size: 1.1em;
 }
 
 #groupMediaLinks {
-  margin: 1.1em 0 0 .4em;
-  width: 13em;
+  margin: 1.1em 0 0 .55em;
+  width: 10em;
   display: flex;
   justify-content: space-between;
 }
@@ -200,6 +200,11 @@ nav ul li a {
   text-align: center;
   width: 100%;
   font-size: 1.5em;
+}
+
+#groupSkills span {
+  font-weight: 600;
+  color: #15202b;
 }
 
 .skillCard {

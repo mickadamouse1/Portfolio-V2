@@ -8,31 +8,27 @@ window.onload = () => {
   const navUnderline = document.getElementById("underline");
 
   btnHome.onclick = function() {
-    navUnderline.style.left = "1.2em";
+    navUnderline.style.left = "1.7em";
     applyActiveStyle(btnHome);
   }
 
   btnAbout.onclick = function() {
-    navUnderline.style.left = "6em";
+    navUnderline.style.left = "5.995em";
     applyActiveStyle(btnAbout);
   }
 
   btnSkills.onclick = function() {
-    navUnderline.style.left = "10.7em";
+    navUnderline.style.left = "10.595em";
     applyActiveStyle(btnSkills);
   }
 
   btnProjects.onclick = function() {
-    navUnderline.style.left = "15.7em";
+    navUnderline.style.left = "15.65em";
     applyActiveStyle(btnProjects);
   }
 
   iconLinkedin.onclick = function() {
     window.open("https://www.linkedin.com/in/michael-chambers-31500219a/");
-  }
-
-  iconInstagram.onclick = function() {
-    window.open("https://www.instagram.com/michaelsdev/");
   }
 
   iconGithub.onclick = function() {
