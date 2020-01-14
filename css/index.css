@@ -9,11 +9,9 @@ html {
   margin: 0;
   text-decoration: none;
   list-style: none;
-  color: #fffafa;
 }
 
 body {
-  background: #212529;
   background: #15202b;
   height: 100%;
   font-family: "Kurale", "Raleway", sans-serif;
@@ -26,6 +24,45 @@ body {
   max-width: 1170px;
 }
 
+p, h1, h2 {
+  user-select: none;
+}
+
+.groupIntro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.groupIntro h1 {
+  font-size: 3em;
+}
+
+.groupIntro hr {
+  height: .2em;
+  border: none;
+  width: 8em;
+  margin: 1em 0;
+}
+
+.groupIntro p {
+  width: 33em;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.header {
+  font-weight: 300;
+  font-size: 2.2em;
+  margin: 1em 0 0;
+  color: #15202b;
+  font-weight: 300;
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+}
+
 /* /////////////////////////////////////////////////// */
 
 /* NAVIGATION BAR */
@@ -33,7 +70,7 @@ body {
 /* Globals */
 
 .active {
-  color: #212529;
+  color: #15202b;
 }
 
 /* Non-Gobals */
@@ -54,7 +91,7 @@ nav {
 nav #brand {
   font-size: 1.8em;
   font-weight: 300;
-  color: #212529;
+  color: #15202b;
 }
 
 nav ul {
@@ -82,7 +119,7 @@ nav ul li a {
   border: none;
   position: absolute;
   top: 1.35em;
-  left: 1.2em;
+  left: 1.16em;
   transition: .5s ease;
 }
 
@@ -92,12 +129,6 @@ nav ul li a {
 
 #sectionAboutMe {
   height: 25em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.groupAboutMe {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,6 +147,7 @@ nav ul li a {
   flex-direction: column;
   align-items: flex-start;
   margin: 0 0 0 1.6em;
+  color: #fff;
 }
 
 #groupAboutText h1 {
@@ -153,38 +185,8 @@ nav ul li a {
 /* SKILLS */
 
 #sectionSkills {
-  height: 100%;
   background: #f4f4f4;
-}
-
-#groupSkillsIntro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#groupSkillsIntro h1, #groupSkillsIntro p {
-  color: #212529;
-}
-
-#groupSkillsIntro h1 {
-  margin-top: 1.5em;
-  font-size: 3em;
-}
-
-#groupSkillsIntro hr {
-  height: .2em;
-  background: #212529;
-  border: none;
-  width: 8em;
-  margin: 1em 0;
-}
-
-#groupSkillsIntro p {
-  width: 33em;
-  text-align: center;
-  font-size: 1.1em;
+  padding: 4.5rem 0;
 }
 
 #groupSkills {
@@ -193,6 +195,14 @@ nav ul li a {
   align-items: center;
   flex-wrap: wrap;
   margin: 2em 0;
+}
+
+#sectionSkills .groupIntro {
+  color: #15202b;
+}
+
+#sectionSkills .groupIntro hr {
+  background: #15202b;
 }
 
 #groupSkills #tip {
@@ -238,12 +248,6 @@ nav ul li a {
   top: -2.5rem;
 }
 
-.skillCard h1 {
-  font-weight: 300;
-  font-size: 2.2em;
-  margin: 1em 0 0;
-}
-
 .skillCard hr {
   width: 3em;
   height: .11em;
@@ -264,16 +268,7 @@ nav ul li a {
 }
 
 #iconJS {
-  padding: .05em 0 0;
   font-size: 2.8em;
-}
-
-#groupSkills h1 {
-  color: #212529;
-  font-weight: 300;
-  font-size: 2em;
-  width: 100%;
-  text-align: center;
 }
 
 #groupSkillsLearning {
@@ -293,6 +288,7 @@ nav ul li a {
   color: #20c997;
   font-size: 3em;
   transform: rotate(0deg);
+  transition: .5s ease;
 }
 
 /* Skills Learning Animations */
@@ -304,9 +300,24 @@ nav ul li a {
 
 .skillsExpanded i {
   transform: rotate(180deg) !important;
-  transition: .5s ease;
 }
 
-/* Get the arrow to animate into its original position.*/
+/* /////////////////////////////////////////////////// */
 
-/*////////////*/
+/* PROJECTS */
+
+#sectionProjects {
+  padding: 4.5rem 0;
+  background: #15202b;
+  height: 60rem;
+  display: flex;
+  justify-content: center;
+}
+
+#sectionProjects .groupIntro {
+  color: #fff;
+}
+
+#sectionProjects .groupIntro hr {
+  background: #fff;
+}

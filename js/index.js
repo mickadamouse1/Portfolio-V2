@@ -8,7 +8,7 @@ window.onload = () => {
   const navUnderline = document.getElementById("underline");
 
   btnHome.onclick = function() {
-    navUnderline.style.left = "1.7em";
+    navUnderline.style.left = "1.2em";
     applyActiveStyle(btnHome);
   }
 
