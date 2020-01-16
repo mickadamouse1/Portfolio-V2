@@ -308,7 +308,6 @@ nav ul li a {
 
 #sectionProjects {
   padding: 4.5rem 0;
-  background: #15202b;
   height: 60rem;
   display: flex;
   justify-content: center;
@@ -324,7 +323,6 @@ nav ul li a {
 
 #groupProjects {
   margin: 2em auto;
-  width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -381,4 +379,102 @@ nav ul li a {
 
 .cardProject a:hover {
   background: #15324fc4;
+}
+
+/*******************************************/
+
+#showcaseRun {
+  height: 30rem;
+  width: 50rem;
+  background: #fff;
+  display: inline-grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 90% 10%;
+  box-shadow: 0 .5px 2px rgba(0,0,0,0.3);
+}
+
+.imageHalf {
+  background: url("../images/run.png");
+  height: 100%;
+  width: 100%;
+  background-position: -6rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.textHalf {
+  padding: 1.5rem;
+  color: #15202b;
+}
+
+.textHalf .title {
+  font-size: 5rem;
+  text-shadow: 0 .5px 1px rgba(0,0,0,0.1);
+  font-weight: 300;
+}
+
+.textHalf h2 {
+  font-size: 1rem;
+  color: #00000059;
+  margin: 0 .4rem;
+}
+
+.textHalf p {
+  margin: .6rem .4rem 1rem;
+  text-shadow: 0 .5px 1px rgba(0,0,0,0.1);
+}
+
+.textHalf .techUsed {
+  font-size: 2rem;
+  text-align: center;
+  color: #20c997;
+  font-weight: 300;
+  text-shadow: 0 .5px 1px rgba(0,0,0,0.1);
+}
+
+.textHalf div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 85%;
+  margin: 1rem auto;
+}
+
+.textHalf div i {
+  color: #fff;
+  background: #20c997;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-shadow: 0 .5px 1px rgba(0,0,0,0.1);
+  border-top: 2px solid rgba(0,0,0,.02);
+}
+
+.liveDemo {
+  background:#252f3a;
+  color:#fff;
+}
+
+.liveDemo:hover {
+  background: #1b252f;
+}
+
+.githubVersion {
+  background: #dedede;
+  color: #15202b;
+}
+
+.githubVersion:hover {
+  background: #80dbc0;
 }
