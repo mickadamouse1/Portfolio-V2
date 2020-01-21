@@ -310,9 +310,6 @@ nav ul li a {
 
 #sectionProjects {
   padding: 4.5rem 0;
-  height: 60rem;
-  display: flex;
-  justify-content: center;
 }
 
 #sectionProjects .groupIntro {
@@ -452,10 +449,6 @@ nav ul li a {
   font-size: 3.2rem;
 }
 
-#showcaseUniqueWords .title span {
-  padding-left: .3rem;
-}
-
 #showcaseUniqueWords .imageHalf {
   background: #f4f4f4;
 }
@@ -478,4 +471,115 @@ nav ul li a {
   background-position: center;
   background-size: 18rem;
   background-repeat: no-repeat;
+}
+
+/* GOBLIN CATCHER */
+
+#showcaseGoblinCatcher .title {
+  font-size: 3.2rem;
+}
+
+#showcaseGoblinCatcher .imageHalf div {
+  background: url("../images/goblinCatcher.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*///////////////////////////////////////////////////////*/
+
+/**/
+
+#sectionContact {
+  background: #f4f4f4;
+  padding: 4.5rem 0;
+}
+
+#sectionContact .groupIntro {
+  color: #15202b;
+}
+
+#sectionContact .groupIntro hr {
+  background: #15202b;
+}
+
+#contactForm {
+  margin: 2.5rem auto 0;
+  display: flex;
+  flex-direction: column;
+  width: 31.25rem;
+}
+
+#contactForm input, #contactForm textarea, #contactForm button {
+  width: 100%;
+  margin: .2rem 0 0 0;
+  border: none;
+  font-size: 1rem;
+  padding: .65rem .9rem;
+  box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+#contactForm button {
+  width: 8rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  background: #15202b;
+  color: #20c997;
+  margin-top: .5rem;
+}
+
+/*//////////////////////////////////////////////////////*/
+
+/* FOOTER */
+
+#sectionFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 16rem;
+}
+
+#copyright {
+  text-align: center;
+  color: #20c997;
+}
+
+#footerLinks {
+  display: flex;
+  justify-content: space-around;
+  width: 20rem;
+  margin: 2.5rem auto;
+}
+
+#footerLinks i, #footerLinks a {
+  background: #20c997;
+  color: #15202b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footerLinks i {
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 2rem;
+}
+
+#footerLinks a {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#footerLinks i:hover, #footerLinks a:hover {
+  background: #15202b;
+  color: #20c997;
+  border: solid 3px #20c997;
+  cursor: pointer; 
+}
+
+#footerLinks a:hover {
+  padding: 0 .81rem;
 }
