@@ -39,6 +39,18 @@ window.onload = () => {
     groupSkillsLearning.classList.toggle("skillsExpanded");
   }
 
+  navHamburger.onclick = function() {
+    if (navItems.classList.contains("navCollapsed")) {
+      navItems.style.display = "flex";
+      navItems.classList.remove("navCollapsed");
+      navItems.classList.add("navExpanded");
+    } else {
+      navItems.style.display = "flex";
+      navItems.classList.add("navCollapsed");
+      navItems.classList.remove("navExpanded");
+    }
+  }
+
   const applyActiveStyle = (element) => {
     const arr = [btnHome, btnAbout, btnSkills, btnProjects];
     for (var i = 0; i < arr.length; i++) {
