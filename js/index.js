@@ -40,14 +40,10 @@ window.onload = () => {
   }
 
   navHamburger.onclick = function() {
-    if (navItems.classList.contains("navCollapsed")) {
-      navItems.style.display = "flex";
-      navItems.classList.remove("navCollapsed");
-      navItems.classList.add("navExpanded");
-    } else {
-      navItems.style.display = "flex";
-      navItems.classList.add("navCollapsed");
+    if (navItems.classList.contains("navExpanded")) {
       navItems.classList.remove("navExpanded");
+    } else {
+      navItems.classList.add("navExpanded");
     }
   }
 

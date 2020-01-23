@@ -114,6 +114,10 @@ nav ul li a {
   display: none;
 }
 
+#navGroup div {
+  display: none;
+}
+
 /* Animation */
 
 #underline {
@@ -588,8 +592,59 @@ nav ul li a {
   padding: 0 .81rem;
 }
 
-@media (max-width: 640px) {
+/*
+
+@media all and () 
+1200 - 1140
+992 - max 960
+786 - max 720
+576 - max 540
+
+*/
+
+@media all and (max-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  #portrait {
+    width: 18rem;
+    height: 18rem;
+  }
   
+  #groupAboutText h1 {
+    font-size: 6rem;
+  }
+
+  #groupAboutText p {
+    width: 37rem;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  #portrait {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  #groupAboutText h1 {
+    font-size: 4.8rem;
+  }
+
+  #groupAboutText p {
+    width: 29rem;
+  }
+}
+
+@media all and (max-width: 786px) {
+  .container {
+    max-width: 720px;
+  }
+
   nav {
     position: fixed;
     z-index: 50;
@@ -597,6 +652,7 @@ nav ul li a {
   }
 
   #navGroup div {
+    display: block;
     background: white;
     width: 100%;
     height: 6rem;
@@ -620,8 +676,8 @@ nav ul li a {
   }
 
   nav ul {
-    display: none;
     position: absolute;
+    top: -100vh;
     left: 0;
     flex-direction: column;
     justify-content: space-evenly;
@@ -649,16 +705,66 @@ nav ul li a {
 
   /* Nav Animation Classes */
   
-  .navCollapsed {
-    top: -100vh;
-    
-  }
   .navExpanded {
-    top: 0rem;
+    top: 0rem !important;
   }
+
+  /* ABOUT ME */
 
   #sectionAboutMe {
     padding-top: 6rem;
+    height: 43.5rem;
+    flex-direction: column;
+  }
+
+  #portrait {
+    width: 14.5rem;
+    height: 14.5rem;
+  }
+
+  #groupAboutText {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  #groupAboutText h1 {
+    width: 20rem;
+    line-height: 4.5rem;
+    margin: .5rem 0;
+    font-size: 4rem;
+  }
+
+  #groupAboutText h1 span {
+    font-size: 4.8rem;
+  }
+
+  #groupAboutText p {
+    margin: .5rem 0;
+    width: 33rem;
+  }
+
+  #groupMediaLinks {
+    margin: 1.1rem 0 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+
+  body {
+    /* background: red; */
+  }
+
+  #sectionAboutMe {
+    height: 46rem;
+  }
+
+  #groupAboutText p {
+    width: 22rem;
   }
 }
 
