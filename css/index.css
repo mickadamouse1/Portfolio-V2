@@ -24,6 +24,10 @@ body {
   max-width: 1170px;
 }
 
+section {
+  padding: 4.5rem 0;
+}
+
 p, h1, h2 {
   user-select: none;
 }
@@ -136,10 +140,11 @@ nav ul li a {
 /* ABOUT ME */
 
 #sectionAboutMe {
-  height: 25em;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem 0;
 }
 
 #portrait {
@@ -194,7 +199,6 @@ nav ul li a {
 
 #sectionSkills {
   background: #f4f4f4;
-  padding: 4.5rem 0;
 }
 
 #groupSkills {
@@ -202,7 +206,7 @@ nav ul li a {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  margin: 2em 0;
+  margin: 2em 0 0;
 }
 
 #sectionSkills .groupIntro {
@@ -227,8 +231,8 @@ nav ul li a {
 
 .skillCard {
   background: #fff;
-  width: 20em;
-  height: 20em;
+  width: 19rem;
+  height: 20rem;
   margin: 4em 0 2em;
   border-radius: .25em;
   box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.1);
@@ -316,10 +320,6 @@ nav ul li a {
 
 /* CLASS STYLING */
 
-#sectionProjects {
-  padding: 4.5rem 0;
-}
-
 #sectionProjects .groupIntro {
   color: #fff;
 }
@@ -338,7 +338,7 @@ nav ul li a {
 
 .showcase {
   margin: 2.5rem 0;
-  height: 30rem;
+  height: auto;
   width: 50rem;
   background: #fff;
   display: inline-grid;
@@ -500,7 +500,6 @@ nav ul li a {
 
 #sectionContact {
   background: #f4f4f4;
-  padding: 4.5rem 0;
 }
 
 #sectionContact .groupIntro {
@@ -592,20 +591,18 @@ nav ul li a {
   padding: 0 .81rem;
 }
 
-/*
-
-@media all and () 
-1200 - 1140
-992 - max 960
-786 - max 720
-576 - max 540
-
-*/
+/*//////////////////////////////////////////////////////*/
+/*// 1200px 1200px 1200px 1200px 1200px 1200px 1200px //*/
+/*//////////////////////////////////////////////////////*/
 
 @media all and (max-width: 1200px) {
   .container {
     max-width: 1140px;
   }
+
+  /* /////////////////////////// */
+
+  /* ABOUT ME */
 
   #portrait {
     width: 18rem;
@@ -621,10 +618,18 @@ nav ul li a {
   }
 }
 
+/*///////////////////////////////////////////////*/
+/*// 992px 992px 992px 992px 992px 992px 992px //*/
+/*///////////////////////////////////////////////*/
+
 @media all and (max-width: 992px) {
   .container {
     max-width: 960px;
   }
+
+  /* /////////////////////////// */
+
+  /* ABOUT ME */
 
   #portrait {
     width: 16rem;
@@ -638,24 +643,67 @@ nav ul li a {
   #groupAboutText p {
     width: 29rem;
   }
+
+  /* /////////////////////////// */
+
+  /* SKILLS */
+
+  .skillCard {
+    width: 20rem;
+    margin: 4rem 0 0;
+  }
+
+  /* /////////////////////////// */
+
+  /* PROJECTS */
+
+  .showcase {
+    width: 45rem;
+    margin: 2rem 0;
+  }
+
+  .textHalf #iconAdobe {
+    font-size: 3rem;
+  }
+
+  .textHalf #iconHTML, .textHalf #iconCSS {
+    font-size: 3rem;
+  }
+
+  .textHalf #iconJS {
+    font-size: 2.7rem;
+  }
 }
+
+/*///////////////////////////////////////////////*/
+/*// 786px 786px 786px 786px 786px 786px 786px //*/
+/*///////////////////////////////////////////////*/
 
 @media all and (max-width: 786px) {
   .container {
     max-width: 720px;
   }
 
+  .groupIntro h1 {
+    font-size: 2.5rem;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
   nav {
     position: fixed;
     z-index: 50;
     width: 100%;
+    height: 5rem;
   }
 
   #navGroup div {
     display: block;
     background: white;
     width: 100%;
-    height: 6rem;
+    height: 5rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -709,11 +757,12 @@ nav ul li a {
     top: 0rem !important;
   }
 
+  /* /////////////////////////// */
+
   /* ABOUT ME */
 
   #sectionAboutMe {
-    padding-top: 6rem;
-    height: 43.5rem;
+    padding: 7rem 0 2rem;
     flex-direction: column;
   }
 
@@ -730,7 +779,7 @@ nav ul li a {
   }
 
   #groupAboutText h1 {
-    width: 20rem;
+    width: 78%;
     line-height: 4.5rem;
     margin: .5rem 0;
     font-size: 4rem;
@@ -742,29 +791,167 @@ nav ul li a {
 
   #groupAboutText p {
     margin: .5rem 0;
+    padding: 0;
     width: 33rem;
   }
 
   #groupMediaLinks {
     margin: 1.1rem 0 0;
   }
+
+  /* //////////////////////////// */
+
+  /* PROJECTS */
+
+  #sectionProjects {
+    padding: 4rem 0 2rem;
+  }
+
+  #groupProjects {
+    margin: 1rem auto;
+  }
+
+  .showcase {
+    width: 34rem;
+    margin: 1.5rem 0;
+    grid-template-columns: 100%;
+    grid-template-rows: 20rem auto 5rem 5rem;
+  }
+
+  #showcaseRun .imageHalf {
+    background-position: 0rem -2rem;
+    background-size: cover;
+  }
+
+  #showcaseUniqueWords .imageHalf div, #showcaseCalculator .imageHalf div {
+    background-position: center;
+    background-size: 14rem;
+  }
+  
+  #showcaseGoblinCatcher .imageHalf {
+    background-position: center -4rem;
+    background-size: 34rem;
+  }
 }
+
+/*///////////////////////////////////////////////*/
+/*// 576px 576px 576px 576px 576px 576px 576px //*/
+/*///////////////////////////////////////////////*/
 
 @media (max-width: 576px) {
   .container {
     max-width: 540px;
   }
 
-  body {
-    /* background: red; */
+  .groupIntro h1 {
+    font-size: 2rem;
   }
 
-  #sectionAboutMe {
-    height: 46rem;
+  .groupIntro p {
+    width: 100%;
+    font-size: 1rem;
   }
+
+  /* /////////////////////////// */
+
+  /* ABOUT ME */
 
   #groupAboutText p {
-    width: 22rem;
+    width: 78%;
+  }
+
+  #sectionSkills {
+    padding: 3rem 0;
+  }
+
+  #groupSkills #tip {
+    font-size: 1.3rem;
+  }
+
+  .skillCard {
+    margin: 4rem 0 0;
+  }
+
+  .header {
+    font-size: 1.7rem;
+  }
+
+  /* /////////////////////////// */
+
+  /* PROJECTS */
+
+  .showcase {
+    width: 100%;
+  }
+
+  .textHalf {
+    text-align: center;
+  }
+
+  .textHalf h2 {
+    margin: .5rem .4rem;
+  }
+
+  .textHalf .title {
+    font-size: 2.8rem !important;
+  }
+
+  .textHalf .techUsed {
+    margin: 0;
+  }
+
+  .textHalf div {
+    justify-content: center;;
+  }
+
+  #showcaseRun .imageHalf {
+    background-position: center;;
+  }
+
+  /* /////////////////////////// */
+
+  /* CONTACT ME */
+
+  #contactForm {
+    width: 100%;
+  }
+}
+
+  /*///////////////////////////////////////////////*/
+  /*// 400px 400px 400px 400px 400px 400px 400px //*/
+  /*///////////////////////////////////////////////*/
+
+@media (max-width: 400px) {
+  
+  /* /////////////////////////// */
+
+  /* ABOUT ME */
+
+  #groupAboutText h1 {
+   width: 87%;
+    line-height: 3.8rem;
+    font-size: 3rem;
+  }
+
+  #groupAboutText h1 span {
+   font-size: 3.8rem;
+  }
+
+  /* /////////////////////////// */
+
+  /* SKILLS */
+
+  .skillCard {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  /* /////////////////////////// */
+
+  /* FOOTER */
+
+  #footerLinks {
+   width: auto;
   }
 }
 
