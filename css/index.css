@@ -294,6 +294,7 @@ nav ul li a {
   align-items: center;
   justify-content: center;
   transition: .5s ease;
+  position: relative;
 }
 
 #groupSkillsLearning i {
@@ -301,6 +302,8 @@ nav ul li a {
   font-size: 3em;
   transform: rotate(0deg);
   transition: .5s ease;
+  position: absolute;
+  bottom: .75rem;
 }
 
 /* Skills Learning Animations */
@@ -510,6 +513,10 @@ nav ul li a {
   background: #15202b;
 }
 
+#sectionContact .groupIntro p {
+  width: 27rem;
+}
+
 #contactForm {
   margin: 2.5rem auto 0;
   display: flex;
@@ -650,7 +657,7 @@ nav ul li a {
 
   .skillCard {
     width: 20rem;
-    margin: 4rem 0 0;
+    margin: 4rem .5rem 0;
   }
 
   /* /////////////////////////// */
@@ -686,6 +693,10 @@ nav ul li a {
 
   .groupIntro h1 {
     font-size: 2.5rem;
+  }
+
+  .groupIntro p {
+    width: 32rem;
   }
 
   section {
@@ -801,6 +812,15 @@ nav ul li a {
 
   /* //////////////////////////// */
 
+  /* SKILLS */
+
+  #groupSkillsLearning {
+    width: 100%;
+    margin: 2rem 0 0;
+  }
+
+  /* //////////////////////////// */
+
   /* PROJECTS */
 
   #sectionProjects {
@@ -912,6 +932,10 @@ nav ul li a {
 
   /* CONTACT ME */
 
+  #sectionContact .groupIntro p {
+    width: 86%;
+  }
+
   #contactForm {
     width: 100%;
   }
@@ -944,6 +968,14 @@ nav ul li a {
   .skillCard {
     height: auto;
     padding: 2rem 0;
+  }
+
+  /* /////////////////////////// */
+
+  /* CONTACT */
+
+  #sectionContact .groupIntro p {
+    width: 90%;
   }
 
   /* /////////////////////////// */
