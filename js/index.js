@@ -7,36 +7,27 @@ window.onload = () => {
 
   const navUnderline = document.getElementById("underline");
 
-  btnHome.onclick = function() {
-    navUnderline.style.left = "1.2em";
-    applyActiveStyle(btnHome);
-  }
+  // /////////////////////////////////////////////////// //
 
-  btnAbout.onclick = function() {
-    navUnderline.style.left = "5.995em";
-    applyActiveStyle(btnAbout);
-  }
+  // NAVIGATION BAR 
 
-  btnSkills.onclick = function() {
-    navUnderline.style.left = "10.595em";
-    applyActiveStyle(btnSkills);
-  }
+  navUnderline.style.display = "block";
 
-  btnProjects.onclick = function() {
-    navUnderline.style.left = "15.65em";
-    applyActiveStyle(btnProjects);
-  }
+  let activeButton = btnHome;
 
-  iconLinkedin.onclick = function() {
-    window.open("https://www.linkedin.com/in/michael-chambers-31500219a/");
-  }
+  window.addEventListener('resize', function() {
+    navUnderline.style.transition = "none";
+    applyActiveStyle(activeButton);
+  });
 
-  iconGithub.onclick = function() {
-    window.open("https://github.com/mickadamouse1");
-  }
+  const arrNavItems = [btnHome, btnAbout, btnSkills, btnProjects];
 
-  btnSkillsDropDownArrow.onclick = function() {
-    groupSkillsLearning.classList.toggle("skillsExpanded");
+  for (let i = 0; i < arrNavItems.length; i++) {
+    arrNavItems[i].onclick = () => {
+      navUnderline.style.transition = ".5s ease";
+      activeButton = arrNavItems[i];
+      applyActiveStyle(arrNavItems[i]);
+    }
   }
 
   navHamburger.onclick = function() {
@@ -47,14 +38,33 @@ window.onload = () => {
     }
   }
 
-  const applyActiveStyle = (element) => {
+  const applyActiveStyle = element => {
     const arr = [btnHome, btnAbout, btnSkills, btnProjects];
     for (var i = 0; i < arr.length; i++) {
       arr[i].classList.remove("active");
     }
     if (!element.classList.contains("active")) element.classList.toggle("active");
+
+    centerAlignElements(navUnderline, element);
+  }
+  
+  centerAlignElements = (fromElement, toElement) => {
+    const fromElementPos = fromElement.getBoundingClientRect();
+    const toElementPos = toElement.getBoundingClientRect();
+    const centerPos = (toElementPos.width - fromElementPos.width) / 2;
+    fromElement.style.left = toElementPos.x + centerPos;
+    fromElement.style.top = toElementPos.y + 21;
   }
 
-  // 1.2 - 6 - 10.7 - 15.7
+  centerAlignElements(navUnderline, btnHome);
 
+  // /////////////////////////////////////////////////// //
+
+  // ABOUT ME 
+
+  iconLinkedin.onclick = () => window.open("https://www.linkedin.com/in/michael-chambers-31500219a/");
+
+  iconGithub.onclick = () => window.open("https://github.com/mickadamouse1");
+
+  btnSkillsDropDownArrow.onclick = () => groupSkillsLearning.classList.toggle("skillsExpanded");
 }
