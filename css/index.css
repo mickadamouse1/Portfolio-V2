@@ -32,6 +32,10 @@ p, h1, h2 {
   user-select: none;
 }
 
+a {
+  outline: none;
+}
+
 .groupIntro {
   display: flex;
   justify-content: center;

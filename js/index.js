@@ -15,7 +15,7 @@ window.onload = () => {
 
   let activeButton = btnHome;
 
-  window.addEventListener('resize', function() {
+  window.addEventListener('resize', () => {
     navUnderline.style.transition = "none";
     applyActiveStyle(activeButton);
   });
@@ -23,27 +23,28 @@ window.onload = () => {
   const arrNavItems = [btnHome, btnAbout, btnSkills, btnProjects];
 
   for (let i = 0; i < arrNavItems.length; i++) {
-    arrNavItems[i].onclick = () => {
+    arrNavItems[i].addEventListener('click', () => {
       navUnderline.style.transition = ".5s ease";
       activeButton = arrNavItems[i];
       applyActiveStyle(arrNavItems[i]);
-    }
+    });
   }
 
-  navHamburger.onclick = function() {
+  navHamburger.addEventListener('click', () => {
     if (navItems.classList.contains("navExpanded")) {
       navItems.classList.remove("navExpanded");
     } else {
       navItems.classList.add("navExpanded");
     }
-  }
+  });
 
-  const applyActiveStyle = element => {
+  applyActiveStyle = element => {
     const arr = [btnHome, btnAbout, btnSkills, btnProjects];
     for (var i = 0; i < arr.length; i++) {
       arr[i].classList.remove("active");
     }
-    if (!element.classList.contains("active")) element.classList.toggle("active");
+
+    element.classList.toggle("active");
 
     centerAlignElements(navUnderline, element);
   }
@@ -62,9 +63,9 @@ window.onload = () => {
 
   // ABOUT ME 
 
-  iconLinkedin.onclick = () => window.open("https://www.linkedin.com/in/michael-chambers-31500219a/");
+  iconLinkedin.addEventListener('click', () => window.open("https://www.linkedin.com/in/michael-chambers-31500219a/"));
 
-  iconGithub.onclick = () => window.open("https://github.com/mickadamouse1");
+  iconGithub.addEventListener('click', () => window.open("https://github.com/mickadamouse1"));
 
-  btnSkillsDropDownArrow.onclick = () => groupSkillsLearning.classList.toggle("skillsExpanded");
+  btnSkillsDropDownArrow.addEventListener('click', () => groupSkillsLearning.classList.toggle("skillsExpanded"));
 }
