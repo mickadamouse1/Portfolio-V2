@@ -67,5 +67,28 @@ window.onload = () => {
 
   iconGithub.addEventListener('click', () => window.open("https://github.com/mickadamouse1"));
 
-  btnSkillsDropDownArrow.addEventListener('click', () => groupSkillsLearning.classList.toggle("skillsExpanded"));
+  // /////////////////////////////////////////////////// //
+
+  // SKILLS 
+
+  const btnSkillsDropDownArrow = document.getElementById('btnSkillsDropDownArrow');
+  var yyu = document.getElementsByClassName('learningSkillsCard');
+
+  btnSkillsDropDownArrow.addEventListener('click', () => {
+    groupSkillsLearning.classList.toggle("skillsExpanded");
+    if (yyu[0].classList.contains('fadeOut')) {
+      setTimeout(function (){
+        for (let i = 0; i < yyu.length; i++) {
+          yyu[i].classList.toggle('fadeOut');
+          yyu[i].classList.toggle('fadeIn');
+        }
+      }, 100);
+    } else {
+      for (let i = 0; i < yyu.length; i++) {
+        yyu[i].classList.toggle('fadeOut');
+        yyu[i].classList.toggle('fadeIn');
+      }
+    }
+    
+  });
 }
