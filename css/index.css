@@ -305,7 +305,7 @@ nav ul li a {
   flex-wrap: wrap;
   transition: .5s ease;
   position: relative;
-  padding-top: 3.5rem;
+  padding: 3.5rem 0 .3rem;
 }
 
 #groupSkillsLearning i {
@@ -319,12 +319,24 @@ nav ul li a {
 }
 
 .learningSkillsCard {
-  background: #f4f4f4;
+  background: #20c997;
+  color: #fff;
+  text-align: center;
   width: 30%;
   margin: 1rem;
-  box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.2);
   border-radius: .25rem;
   padding: 2rem;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.learningSkillsCard h1 {
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+}
+
+.learningSkillsCard p {
+  font-size: 1.1rem;
 }
 
 /* Skills Learning Animations */
