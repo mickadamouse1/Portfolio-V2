@@ -1,32 +1,49 @@
 window.onload = () => {
-  const btnHome = document.getElementById("btnHome");
   const btnAbout = document.getElementById("btnAbout");
   const btnSkills = document.getElementById("btnSkills");
   const btnProjects = document.getElementById("btnProjects");
-  const btnContactMe = document.getElementById("btnContactMe");
+  const btnContact = document.getElementById("btnContact");
 
   const navUnderline = document.getElementById("underline");
 
+  // /////////////////////////////////////////////////// //
+  // /////////////////////////////////////////////////// //
   // /////////////////////////////////////////////////// //
 
   // NAVIGATION BAR 
 
   navUnderline.style.display = "block";
 
-  let activeButton = btnHome;
+  let activeButton = btnAbout;
 
   window.addEventListener('resize', () => {
     navUnderline.style.transition = "none";
-    applyActiveStyle(activeButton);
+    if (activeButton !== btnContact) applyActiveStyle(activeButton);
+
+    if (window.innerWidth <= 786 && btnContact.style.background !== 'none') btnContact.style.background = 'none';
+    if (window.innerWidth > 786 && btnContact.style.backgroundColor !== '#20c997') btnContact.style.background = '#20c997';
   });
 
-  const arrNavItems = [btnHome, btnAbout, btnSkills, btnProjects];
+  const arrNavItems = [btnAbout, btnSkills, btnProjects, btnContact];
 
   for (let i = 0; i < arrNavItems.length; i++) {
+    // This variable is used to create the name of the section each nav item will scroll to.
+    let x = arrNavItems[i].id;
+
     arrNavItems[i].addEventListener('click', () => {
       navUnderline.style.transition = ".5s ease";
       activeButton = arrNavItems[i];
       applyActiveStyle(arrNavItems[i]);
+
+      // smooth scrolling location (x.slice removes the "btn" from the variable name)
+      document.querySelector('#section' + x.slice(3)).scrollIntoView({behavior: 'smooth'});
+
+      // If the dropdown is enabled, after scrolling, disable it
+      if (window.innerWidth <= 786) {
+        setTimeout(() => {
+          navItems.classList.toggle('navExpanded');
+        }, 250);
+      }
     });
   }
 
@@ -39,14 +56,35 @@ window.onload = () => {
   });
 
   applyActiveStyle = element => {
-    const arr = [btnHome, btnAbout, btnSkills, btnProjects];
+    const arr = [btnAbout, btnSkills, btnProjects];
     for (var i = 0; i < arr.length; i++) {
       arr[i].classList.remove("active");
     }
-
     element.classList.toggle("active");
 
-    centerAlignElements(navUnderline, element);
+    if (element !== btnContact && navUnderline.classList.contains('fadeOut')) navUnderline.classList.remove('fadeOut');
+
+    if (element === btnContact) {
+      navUnderline.style.transition = ".1s ease";
+      navUnderline.classList.add('fadeOut');
+
+      // This only applies when the nav isnt a dropdown
+      if (window.innerWidth > 786) {
+        btnContact.style.transition = ".25s ease";
+        btnContact.style.background = "#212529";
+        // after .25 seconds, reset the color
+        setTimeout(() => {
+          btnContact.style.background = "#20c997";
+          // another timeout stops the animation from ending too early
+          setTimeout(() => {
+            btnContact.style.transition = "none";
+          }, 250)
+        }, 250);
+      }
+      
+    }
+
+    if (element !== btnContact) centerAlignElements(navUnderline, element);
   }
   
   centerAlignElements = (fromElement, toElement) => {
@@ -57,8 +95,10 @@ window.onload = () => {
     fromElement.style.top = toElementPos.y + 21;
   }
 
-  centerAlignElements(navUnderline, btnHome);
+  centerAlignElements(navUnderline, btnAbout);
 
+  // /////////////////////////////////////////////////// //
+  // /////////////////////////////////////////////////// //
   // /////////////////////////////////////////////////// //
 
   // ABOUT ME 
@@ -67,6 +107,8 @@ window.onload = () => {
 
   iconGithub.addEventListener('click', () => window.open("https://github.com/mickadamouse1"));
 
+  // /////////////////////////////////////////////////// //
+  // /////////////////////////////////////////////////// //
   // /////////////////////////////////////////////////// //
 
   // SKILLS 
@@ -91,4 +133,14 @@ window.onload = () => {
     }
     
   });
+
+  // /////////////////////////////////////////////////// //
+  // /////////////////////////////////////////////////// //
+  // /////////////////////////////////////////////////// //
+
+  // BUG FIXES
+
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  },0)
 }

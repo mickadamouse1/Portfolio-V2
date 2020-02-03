@@ -1,6 +1,7 @@
 html {
   height: 100%;
   overflow: visible;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -9,6 +10,7 @@ html {
   margin: 0;
   text-decoration: none;
   list-style: none;
+  backface-visibility: hidden;
 }
 
 body {
@@ -25,7 +27,7 @@ body {
 }
 
 section {
-  padding: 4.5rem 0;
+  padding: 7.5rem 0 4.5rem;
 }
 
 p, h1, h2 {
@@ -34,6 +36,7 @@ p, h1, h2 {
 
 a {
   outline: none;
+  cursor: pointer;
 }
 
 .groupIntro {
@@ -85,9 +88,12 @@ a {
 
 nav {
   background: #fff;
-  height: 6em;
+  height: 5.5rem;
+  width: 100%;
   display: flex;
   font-weight: 500;
+  z-index: 999999;
+  position: fixed;
 }
 
 #navGroup {
@@ -112,7 +118,7 @@ nav ul li a {
   color: #212529ad;
 }
 
-#btnContactMe {
+#btnContact {
   background: #20c997;
   color: white;
   padding: 0.4em .8em;
@@ -138,20 +144,24 @@ nav ul li a {
   transition: .5s ease;
 }
 
+#underline .fadeOut {
+  transition: .1s ease;
+}
+
 /* /////////////////////////////////////////////////// */
 
 /* ABOUT ME */
 
-#sectionAboutMe {
+#sectionAbout {
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
+  padding: 7.5rem 0 2rem;
 }
 
 #portrait {
-  background: url("../images/aboutMe/portrait.jpg");
+  background: url("../images/about/portrait.jpg");
   height: 20em;
   width: 20em;
   background-position: center;
@@ -596,7 +606,8 @@ nav ul li a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 16rem;
+  height: 14rem;
+  padding: 4.5rem;
 }
 
 #copyright {
@@ -744,7 +755,7 @@ nav ul li a {
   }
 
   section {
-    padding: 4rem 0;
+    padding: 7rem 0 4rem;
   }
 
   nav {
@@ -800,7 +811,7 @@ nav ul li a {
     margin: 5rem 0 0;
   }
 
-  #btnContactMe {
+  #btnContact {
     background: none;
     color: #212529ad;
   }
@@ -823,7 +834,7 @@ nav ul li a {
 
   /* ABOUT ME */
 
-  #sectionAboutMe {
+  #sectionAbout {
     padding: 7rem 0 2rem;
     flex-direction: column;
   }
@@ -875,7 +886,7 @@ nav ul li a {
   /* PROJECTS */
 
   #sectionProjects {
-    padding: 4rem 0 2rem;
+    padding: 7rem 0 2rem;
   }
 
   #groupProjects {
@@ -933,10 +944,6 @@ nav ul li a {
 
   #groupAboutText p {
     width: 78%;
-  }
-
-  #sectionSkills {
-    padding: 3rem 0;
   }
 
   #groupSkills #tip {
