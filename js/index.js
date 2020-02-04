@@ -6,6 +6,10 @@ window.onload = () => {
 
   const navUnderline = document.getElementById("underline");
 
+  const classSkillsExpanded = document.getElementsByClassName('skillsExpanded');
+  const learningSkillsCard = document.getElementsByClassName('learningSkillsCard');
+  const groupSkillsLearning = document.getElementById('groupSkillsLearning');
+
   // /////////////////////////////////////////////////// //
   // /////////////////////////////////////////////////// //
   // /////////////////////////////////////////////////// //
@@ -16,13 +20,21 @@ window.onload = () => {
 
   let activeButton = btnAbout;
 
+  /////////////////////////////////////////////////////////////////////////////////////////
+
   window.addEventListener('resize', () => {
     navUnderline.style.transition = "none";
     if (activeButton !== btnContact) applyActiveStyle(activeButton);
 
+    // resets the colour of the "Contact Me" button when the window is resized
     if (window.innerWidth <= 786 && btnContact.style.background !== 'none') btnContact.style.background = 'none';
     if (window.innerWidth > 786 && btnContact.style.backgroundColor !== '#20c997') btnContact.style.background = '#20c997';
+
+    // Removes the transition from expanding skills to prevent smooth scaling when window is resized
+    skillsDropdownTransition('none', 'none');
   });
+
+  /////////////////////////////////////////////////////////////////////////////////////////
 
   const arrNavItems = [btnAbout, btnSkills, btnProjects, btnContact];
 
@@ -47,6 +59,8 @@ window.onload = () => {
     });
   }
 
+  /////////////////////////////////////////////////////////////////////////////////////////
+
   navHamburger.addEventListener('click', () => {
     if (navItems.classList.contains("navExpanded")) {
       navItems.classList.remove("navExpanded");
@@ -54,6 +68,8 @@ window.onload = () => {
       navItems.classList.add("navExpanded");
     }
   });
+
+  /////////////////////////////////////////////////////////////////////////////////////////
 
   applyActiveStyle = element => {
     const arr = [btnAbout, btnSkills, btnProjects];
@@ -72,9 +88,11 @@ window.onload = () => {
       if (window.innerWidth > 786) {
         btnContact.style.transition = ".25s ease";
         btnContact.style.background = "#212529";
+
         // after .25 seconds, reset the color
         setTimeout(() => {
           btnContact.style.background = "#20c997";
+
           // another timeout stops the animation from ending too early
           setTimeout(() => {
             btnContact.style.transition = "none";
@@ -87,13 +105,17 @@ window.onload = () => {
     if (element !== btnContact) centerAlignElements(navUnderline, element);
   }
   
+  /////////////////////////////////////////////////////////////////////////////////////////
+
   centerAlignElements = (fromElement, toElement) => {
     const fromElementPos = fromElement.getBoundingClientRect();
     const toElementPos = toElement.getBoundingClientRect();
     const centerPos = (toElementPos.width - fromElementPos.width) / 2;
     fromElement.style.left = toElementPos.x + centerPos;
-    fromElement.style.top = toElementPos.y + 21;
+    fromElement.style.top = toElementPos.y + 23;
   }
+
+  /////////////////////////////////////////////////////////////////////////////////////////
 
   centerAlignElements(navUnderline, btnAbout);
 
@@ -101,38 +123,43 @@ window.onload = () => {
   // /////////////////////////////////////////////////// //
   // /////////////////////////////////////////////////// //
 
-  // ABOUT ME 
-
-  iconLinkedin.addEventListener('click', () => window.open("https://www.linkedin.com/in/michael-chambers-31500219a/"));
-
-  iconGithub.addEventListener('click', () => window.open("https://github.com/mickadamouse1"));
-
-  // /////////////////////////////////////////////////// //
-  // /////////////////////////////////////////////////// //
-  // /////////////////////////////////////////////////// //
-
   // SKILLS 
 
+  /////////////////////////////////////////////////////////////////////////////////////////
+
   const btnSkillsDropDownArrow = document.getElementById('btnSkillsDropDownArrow');
-  var yyu = document.getElementsByClassName('learningSkillsCard');
+  var classSkillCard = document.getElementsByClassName('learningSkillsCard');
 
   btnSkillsDropDownArrow.addEventListener('click', () => {
     groupSkillsLearning.classList.toggle("skillsExpanded");
-    if (yyu[0].classList.contains('fadeOut')) {
+    if (classSkillCard[0].classList.contains('fadeOut')) {
       setTimeout(function (){
-        for (let i = 0; i < yyu.length; i++) {
-          yyu[i].classList.toggle('fadeOut');
-          yyu[i].classList.toggle('fadeIn');
+        for (let i = 0; i < classSkillCard.length; i++) {
+          classSkillCard[i].classList.toggle('fadeOut');
+          classSkillCard[i].classList.toggle('fadeIn');
         }
+        skillsDropdownTransition('.5s ease', '.75s ease');
       }, 100);
     } else {
-      for (let i = 0; i < yyu.length; i++) {
-        yyu[i].classList.toggle('fadeOut');
-        yyu[i].classList.toggle('fadeIn');
+      for (let i = 0; i < classSkillCard.length; i++) {
+        classSkillCard[i].classList.toggle('fadeOut');
+        classSkillCard[i].classList.toggle('fadeIn');
       }
+      skillsDropdownTransition('.5s ease', '.25s ease');
     }
-    
   });
+
+  /////////////////////////////////////////////////////////////////////////////////////////
+
+  const skillsDropdownTransition = (x, y) => {
+    if (groupSkillsLearning.classList.contains('skillsExpanding')) classSkillsExpanded[0].style.transition = x;
+    groupSkillsLearning.style.transition = x;
+
+    for (let i = 0; i < learningSkillsCard.length; i++) {
+      learningSkillsCard[i].style.transition = y;
+    }
+  }
+
 
   // /////////////////////////////////////////////////// //
   // /////////////////////////////////////////////////// //
