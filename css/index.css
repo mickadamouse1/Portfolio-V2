@@ -566,10 +566,11 @@ nav ul li a {
 
 /*///////////////////////////////////////////////////////*/
 
-/**/
+/* CONTACT ME */
 
 #sectionContact {
   background: #f4f4f4;
+  padding: 7.5rem 0;
 }
 
 #sectionContact .groupIntro {
@@ -587,27 +588,76 @@ nav ul li a {
 #contactForm {
   margin: 2.5rem auto 0;
   display: flex;
-  flex-direction: column;
-  width: 31.25rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 31rem;
 }
 
-#contactForm input, #contactForm textarea, #contactForm button {
-  width: 100%;
-  margin: .2rem 0 0 0;
+#contactForm h3, #contactForm textarea, #contactForm button {
   border: none;
   font-size: 1rem;
   padding: .65rem .9rem;
   box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.1);
   background: #fff;
+  height: 3rem;
+}
+
+#contactForm h3, #contactForm textarea {
+  z-index: 22;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #15202bcf;
+  font-family: 'raleway', sans-serif;
+  line-height: 1.8rem;
+  overflow: hidden;
+  resize: none;
+}
+
+#contactForm h3 {
+  width: auto;
+}
+
+#contactForm textarea {
+  box-shadow: .19rem 0.125rem .25rem rgba(0, 0, 0, 0.1);
+  width: 23rem;
 }
 
 #contactForm button {
-  width: 8rem;
-  height: 3rem;
+  width: 7rem;
   font-size: 1.2rem;
   background: #15202b;
   color: #20c997;
-  margin-top: .5rem;
+  box-shadow: 0 0.125em .25em rgba(0, 0, 0, .5);
+  position: relative;
+}
+
+#contactForm button:hover {
+  cursor: pointer;
+}
+
+#contactForm button span {
+  opacity: 0;
+  position: absolute;
+  top: 4.5rem;
+  right: -3.85rem;
+  width: 12rem;
+  border-radius: .8rem;
+  padding: .5rem;
+  background: #15202b;
+  transition: .5s ease;
+}
+
+#contactForm button span::after {
+  content: "";
+  position: absolute;
+  top: -1.9rem;
+  right: 6rem;
+  border-width: 15px;
+  border-style: solid;
+  border-color: #15202b transparent transparent;
+  transform: scaleY(-1);
 }
 
 /*//////////////////////////////////////////////////////*/

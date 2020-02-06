@@ -166,6 +166,29 @@ window.onload = () => {
   // /////////////////////////////////////////////////// //
   // /////////////////////////////////////////////////// //
 
+  // SKILLS 
+
+  const btnCopyEmail = document.getElementById('btnCopyEmail');
+  // const txtEmail = document.getElementById('txtEmail');
+
+  /////////////////////////////////////////////////////////////////////////////////////////
+
+  btnCopyEmail.addEventListener('click', (event) => {
+    var txtEmail = document.getElementById('txtEmail');
+    txtEmail.focus();
+    txtEmail.select();
+    document.execCommand('copy');
+
+    popup.style.opacity = 1;
+    setTimeout(() => {
+      popup.style.opacity = 0;
+    }, 1500);
+  });
+
+  // /////////////////////////////////////////////////// //
+  // /////////////////////////////////////////////////// //
+  // /////////////////////////////////////////////////// //
+
   // BUG FIXES
 
   setTimeout(() => {
