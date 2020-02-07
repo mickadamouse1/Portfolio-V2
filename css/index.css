@@ -619,9 +619,18 @@ nav ul li a {
   width: auto;
 }
 
+#contactForm textarea, #contactForm button {
+  outline: none;
+}
+
 #contactForm textarea {
   box-shadow: .19rem 0.125rem .25rem rgba(0, 0, 0, 0.1);
   width: 23rem;
+}
+
+#contactForm textarea::selection {
+  background: #fff;
+  color: #15202bcf;
 }
 
 #contactForm button {
@@ -1023,6 +1032,18 @@ nav ul li a {
   .projectLink {
     height: auto;
   }
+
+  /* //////////////////////////// */
+
+  /* CONTACT ME */
+
+  #contactForm button span {
+    right: -.85rem;
+  }
+
+  #contactForm button span::after {
+    right: 3rem;
+  }
 }
 
 /*///////////////////////////////////////////////*/
@@ -1105,7 +1126,37 @@ nav ul li a {
 
   #contactForm {
     width: 100%;
+    flex-wrap: wrap;
   }
+
+  #contactForm h3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: none;
+  }
+
+  #contactForm textarea {
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  #contactForm button {
+    padding: 0;
+    width: 30%;
+  }
+
+  #contactForm button span {
+    right: -1.35rem;
+  }
+
+  #contactForm button span::after {
+    right: 5rem;
+  }
+
 }
 
   /*///////////////////////////////////////////////*/
@@ -1163,4 +1214,11 @@ nav ul li a {
   }
 }
 
+
+@media (max-width: 362px) {
+
+  #contactForm textarea {
+    font-size: .85rem;
+  }
+}
   
