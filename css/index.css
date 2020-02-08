@@ -6,24 +6,24 @@ html {
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   text-decoration: none;
   list-style: none;
   backface-visibility: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 body {
+  font-family: "Raleway", sans-serif;
   background: #15202b;
   height: 100%;
-  font-family: "Raleway", sans-serif;
 }
 
 .container {
   width: 100%;
-  padding: 0 15px;
+  max-width: 73.125rem;
+  padding: 0 0.93rem;
   margin: 0 auto;
-  max-width: 1170px;
 }
 
 section {
@@ -47,31 +47,29 @@ a {
 }
 
 .groupIntro h1 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 .groupIntro hr {
-  height: .2em;
+  width: 8rem;
+  height: .2rem;
   border: none;
-  width: 8em;
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 .groupIntro p {
-  width: 33em;
+  font-size: 1.1rem;
+  width: 33rem;
   text-align: center;
-  font-size: 1.1em;
 }
 
 .header {
+  font-size: 2rem;
   font-weight: 300;
-  font-size: 2.2em;
-  margin: 1em 0 0;
   color: #15202b;
-  font-weight: 300;
-  font-size: 2em;
   width: 100%;
   text-align: center;
+  margin: 1rem 0 0;
 }
 
 /* /////////////////////////////////////////////////// */
@@ -87,13 +85,13 @@ a {
 /* Non-Gobals */
 
 nav {
-  background: #fff;
-  height: 5.5rem;
-  width: 100%;
-  display: flex;
   font-weight: 500;
-  z-index: 999999;
+  background: #fff;
+  width: 100%;
+  height: 5.5rem;
+  display: flex;
   position: fixed;
+  z-index: 999999;
 }
 
 #navGroup {
@@ -103,7 +101,7 @@ nav {
 }
 
 nav #brand {
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: 300;
   color: #15202b;
 }
@@ -113,32 +111,27 @@ nav ul {
 }
 
 nav ul li a {
-  margin: 0 1em;
-  color: #212529ad;
   font-size: 1.1rem;
+  color: #212529ad;
+  margin: 0 1.1rem;
 }
 
 #btnContact {
+  color: #fff;
   background: #20c997;
-  color: white;
-  padding: 0.4em .8em;
+  padding: 0.4rem .8rem;
 }
 
-#navHamburger {
-  display: none;
-}
-
-#navGroup div {
+#navHamburger, #navGroup div, #underline {
   display: none;
 }
 
 /* Animation */
 
 #underline {
-  display: none;
-  width: 2.56rem;
-  height: .15em;
   background: #212529;
+  width: 2.56rem;
+  height: .15rem;
   border: none;
   position: absolute;
   transition: .5s ease;
@@ -154,30 +147,30 @@ nav ul li a {
 
 #sectionAbout {
   height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 7.5rem 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #portrait {
   background: url("../images/about/portrait.jpg");
-  height: 20em;
-  width: 20em;
+  width: 20rem;
+  height: 20rem;
   background-position: center;
   background-size: cover;
-  border-radius: .25em;
+  border-radius: .5rem;
 }
 
 #groupAboutText {
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0 0 0 1.6em;
   color: #fff;
+  margin: 0 0 0 1.6rem;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 #groupAboutText h1 {
-  font-size: 7em;
+  font-size: 7rem;
 }
 
 #groupAboutText h1 span {
@@ -185,21 +178,21 @@ nav ul li a {
 }
 
 #txtAbout {
-  width: 37.7em;
-  padding: 0 0 0 .5em;
-  font-size: 1.1em;
+  font-size: 1.1rem;
+  width: 42rem;
+  padding: 0 0 0 .5rem;
 }
 
 #groupMediaLinks {
-  margin: 1.1em 0 0 .55em;
   width: 27.5rem;
+  margin: 1.1rem 0 0 .55rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .mediaLinks {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   color: #fff;
 }
 
@@ -210,9 +203,9 @@ nav ul li a {
 
 #groupMediaLinks p {
   font-size: 1.05rem;
-  padding: 0;
   color: #ffffffa1;
   width: auto;
+  padding: 0;
 }
 
 #groupMediaLinks p:hover {
@@ -230,14 +223,14 @@ nav ul li a {
 }
 
 #groupSkills {
+  margin: 2rem 0 0;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 2em 0 0;
 }
 
-#sectionSkills .groupIntro {
+#sectionSkills .groupIntro, .skillCard h1, .skillCard p, .skillCard b {
   color: #15202b;
 }
 
@@ -246,10 +239,10 @@ nav ul li a {
 }
 
 #groupSkills #tip {
+  font-size: 1.5rem;
   color: #000000a3;
-  text-align: center;
   width: 100%;
-  font-size: 1.5em;
+  text-align: center;
 }
 
 #groupSkills span {
@@ -263,18 +256,14 @@ nav ul li a {
   background: #fff;
   width: 19rem;
   height: 20rem;
-  margin: 4em 0 2em;
-  border-radius: .25em;
-  box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.1);
-  position: relative;
+  border-radius: .35rem;
+  box-shadow: 0 0.125rem .25rem rgba(0, 0, 0, 0.1);
+  margin: 4rem 0 2rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-}
-
-.skillCard h1, .skillCard p, .skillCard b {
-  color: #15202b;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
 
 .skillCard i {
@@ -284,51 +273,69 @@ nav ul li a {
   height: 5rem;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   position: absolute;
   top: -2.5rem;
 }
 
 .skillCard hr {
-  width: 3em;
-  height: .11em;
   background: #212529;
+  width: 3rem;
+  height: .11rem;
   border: none;
-  margin: 1em;
+  margin: 1rem;
 }
 
 .skillCard p {
-  text-align: center;
+  font-size: 1.1rem;
   width: 80%;
-  font-size: 1.1em;
+  text-align: center;
 }
 
 #iconHTML, #iconCSS {
-  padding: .13em 0 0;
-  font-size: 3.5em;
+  font-size: 3.5rem;
+  padding: .5rem 0 0;
 }
 
 #iconJS {
-  font-size: 2.8em;
+  font-size: 2.8rem;
 }
 
 /* Skills learning */
 
 #groupSkillsLearning {
-  width: 65.5em;
   background: #fff;
-  border-radius: .25em;
+  width: 65.5rem;
   max-height: 4.5rem;
-  margin: 2em 2em 0;
+  border-radius: .35rem;
   box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.1);
+  margin: 2em 2em 0;
+  padding: 3.5rem 0 .3rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  transition: .5s ease;
   position: relative;
-  padding: 3.5rem 0 .3rem;
+  transition: .5s ease;
 }
+
+/*..............................................................................................*/
+/*/.............................................................................................*/
+/*/.............................................................................................*/
+/*/.............................................................................................*/
+/*/.............................................................................................*/
+/*/.............................................................................................*/
+/*/.............................................................................................*/
+/*/.............................................................................................*/
+/*/.............................................................................................*/
+/*/..........................................CONTINUE...........................................*/
+/*/...........................................FROM..............................................*/
+/*/...........................................HERE..............................................*/
+/*/.............................................................................................*/
+/*/.........................................   <3   ............................................*/
+/*/.............................................................................................*/
+/*/.............................................................................................*/
+
 
 #groupSkillsLearning i {
   color: #20c997;
