@@ -19,7 +19,7 @@ window.onload = () => {
   navUnderline.style.display = 'block';
 
   let activeButton = btnAbout;
-
+  
   /////////////////////////////////////////////////////////////////////////////////////////
 
   window.addEventListener('resize', () => {
@@ -33,6 +33,8 @@ window.onload = () => {
     // Removes the transition from expanding skills to prevent smooth scaling when window is resized
     skillsDropdownTransition('none', 'none');
   });
+
+  
 
   /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -191,7 +193,7 @@ window.onload = () => {
 
   // BUG FIXES
 
-  setTimeout(() => {
-    window.scrollTo(0, 0);
-  },0);
+  // setTimeout(() => {
+  //   window.scrollTo(0, 0);
+  // },0);
 }

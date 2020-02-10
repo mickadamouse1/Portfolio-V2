@@ -63,6 +63,22 @@ a {
   text-align: center;
 }
 
+.introLight {
+  color: #fff;
+}
+
+.introLight hr {
+  background: #fff;
+}
+
+.introDark {
+  color: #15202b;
+}
+
+.introDark hr {
+  background: #15202b;
+}
+
 .header {
   font-size: 2rem;
   font-weight: 300;
@@ -70,6 +86,16 @@ a {
   width: 100%;
   text-align: center;
   margin: 1rem 0 0;
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: .75s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: .25s ease;
 }
 
 /* /////////////////////////////////////////////////// */
@@ -230,12 +256,8 @@ nav ul li a {
   flex-wrap: wrap;
 }
 
-#sectionSkills .groupIntro, .skillCard h1, .skillCard p, .skillCard b {
+#sectionSkills .skillCard h1, .skillCard p, .skillCard b {
   color: #15202b;
-}
-
-#sectionSkills .groupIntro hr {
-  background: #15202b;
 }
 
 #groupSkills #tip {
@@ -319,50 +341,32 @@ nav ul li a {
   transition: .5s ease;
 }
 
-/*..............................................................................................*/
-/*/.............................................................................................*/
-/*/.............................................................................................*/
-/*/.............................................................................................*/
-/*/.............................................................................................*/
-/*/.............................................................................................*/
-/*/.............................................................................................*/
-/*/.............................................................................................*/
-/*/.............................................................................................*/
-/*/..........................................CONTINUE...........................................*/
-/*/...........................................FROM..............................................*/
-/*/...........................................HERE..............................................*/
-/*/.............................................................................................*/
-/*/.........................................   <3   ............................................*/
-/*/.............................................................................................*/
-/*/.............................................................................................*/
-
-
 #groupSkillsLearning i {
+  font-size: 3rem;
   color: #20c997;
-  font-size: 3em;
-  transform: rotate(0deg);
-  transition: .5s ease;
   position: absolute;
   top: .75rem;
+  transform: rotate(0deg);
   z-index: 20;
+  transition: .5s ease;
 }
 
 .learningSkillsCard {
-  background: #20c997;
   color: #fff;
-  text-align: center;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  background: #20c997;
   width: 30%;
   height: auto;
-  margin: 1rem;
-  box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.2);
+  text-align: center;
   border-radius: .25rem;
+  box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.2);
+  margin: 1rem;
   padding: 2rem;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
 .learningSkillsCard h1 {
-  margin: 0 0 1rem 0;
   font-size: 1.8rem;
+  margin: 0 0 1rem 0;
 }
 
 .learningSkillsCard p {
@@ -370,16 +374,6 @@ nav ul li a {
 }
 
 /* Skills Learning Animations */
-
-.fadeIn {
-  opacity: 1;
-  transition: .75s ease;
-}
-
-.fadeOut {
-  opacity: 0;
-  transition: .25s ease;
-}
 
 .skillsExpanded {
   max-height: 25rem !important;
@@ -396,31 +390,22 @@ nav ul li a {
 
 /* CLASS STYLING */
 
-#sectionProjects .groupIntro {
-  color: #fff;
-}
-
-#sectionProjects .groupIntro hr {
-  background: #fff;
-}
-
 #groupProjects {
-  margin: 2em auto;
+  margin: 2rem auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .showcase {
-  margin: 2.5rem 0;
-  height: auto;
-  width: 50rem;
   background: #fff;
-  display: inline-grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 90% 3.5rem;
+  width: 50rem;
+  height: auto;
   box-shadow: 0 .5px 2px rgba(0,0,0,0.3);
+  margin: 2.5rem 0;
+  display: inline-grid;
+  grid-template-columns: 50% 50%;  
 }
 
 .imageHalf {
@@ -428,20 +413,21 @@ nav ul li a {
 }
 
 .image {
-  position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .textHalf {
-  padding: 1.5rem;
   color: #15202b;
+  padding: 1.5rem;
 }
 
 .textHalf .title {
   font-size: 4rem;
-  text-shadow: 0 .5px 1px rgba(0,0,0,0.1);
   font-weight: 300;
+  text-shadow: 0 .5px 1px rgba(0,0,0,0.1);
+  padding-left: .1rem;
 }
 
 .textHalf h2 {
@@ -451,21 +437,22 @@ nav ul li a {
 }
 
 .textHalf p {
-  margin: .6rem .4rem 1rem;
+  font-size: 1.1rem;
   text-shadow: 0 .5px 1px rgba(0,0,0,0.1);
+  margin: .6rem .4rem 1rem;
 }
 
 .textHalf .techUsed {
   font-size: 2rem;
-  color: #15202b;
   font-weight: 300;
+  color: #15202b;
   margin-left: .4rem;
 }
 
 .textHalf div {
+  margin: 1rem .4rem;
   display: flex;
   align-items: center;
-  margin: 1rem .4rem;
 }
 
 .textHalf div i {
@@ -473,10 +460,10 @@ nav ul li a {
   background: #15202b;
   width: 5rem;
   height: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 .25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .textHalf #iconJS {
@@ -488,19 +475,20 @@ nav ul li a {
 }
 
 .projectLink {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; 
   font-size: 1.3rem;
   font-weight: 700;
   text-shadow: 0 .5px 1px rgba(0,0,0,0.1);
+  height: 3.5rem; 
   border-top: 2px solid rgba(0,0,0,.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .liveDemo {
-  background:#252f3a;
   color:#fff;
+  background:#252f3a;
 }
 
 .liveDemo:hover {
@@ -508,8 +496,8 @@ nav ul li a {
 }
 
 .githubVersion {
-  background: #dedede;
   color: #15202b;
+  background: #dedede;
 }
 
 .githubVersion:hover {
@@ -522,10 +510,7 @@ nav ul li a {
 /* RUN */
 
 #showcaseRun .imageHalf {
-  background: url("../images/run.png");
-  background-position: -6rem;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url("../images/run.png") -9rem/cover no-repeat;
 }
 
 /* UNIQUE WORDS */
@@ -539,10 +524,7 @@ nav ul li a {
 }
 
 #showcaseUniqueWords .imageHalf div {
-  background: url("../images/uniqueWords.png");
-  background-position: center;
-  background-size: 18rem;
-  background-repeat: no-repeat;
+  background: url("../images/uniqueWords.png") center/18rem no-repeat;
 }
 
 /* CALCULATOR */
@@ -552,10 +534,7 @@ nav ul li a {
 }
 
 #showcaseCalculator .imageHalf div {
-  background: url("../images/calculator.png");
-  background-position: center;
-  background-size: 18rem;
-  background-repeat: no-repeat;
+  background: url("../images/calculator.png") center/18rem no-repeat;
 }
 
 /* GOBLIN CATCHER */
@@ -565,10 +544,7 @@ nav ul li a {
 }
 
 #showcaseGoblinCatcher .imageHalf div {
-  background: url("../images/goblinCatcher.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url("../images/goblinCatcher.png") center/cover no-repeat;
 }
 
 /*///////////////////////////////////////////////////////*/
@@ -580,46 +556,38 @@ nav ul li a {
   padding: 7.5rem 0;
 }
 
-#sectionContact .groupIntro {
-  color: #15202b;
-}
-
-#sectionContact .groupIntro hr {
-  background: #15202b;
-}
-
 #sectionContact .groupIntro p {
-  width: 27rem;
+  width: 29rem;
 }
 
 #contactForm {
+  width: 31rem;
   margin: 2.5rem auto 0;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  width: 31rem;
+  justify-content: center;
+  flex-direction: row;
 }
 
 #contactForm h3, #contactForm textarea, #contactForm button {
-  border: none;
   font-size: 1rem;
-  padding: .65rem .9rem;
-  box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.1);
   background: #fff;
   height: 3rem;
+  border: none;
+  box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.1);
+  padding: .65rem .9rem;
 }
 
 #contactForm h3, #contactForm textarea {
-  z-index: 22;
-  display: flex;
-  align-items: center;
-  font-size: 1.1rem;
-  color: #15202bcf;
-  font-family: 'raleway', sans-serif;
-  line-height: 1.8rem;
-  overflow: hidden;
   resize: none;
+  overflow: hidden;
+  font-size: 1.1rem;
+  font-family: 'raleway', sans-serif;
+  color: #15202bcf;
+  align-items: center;
+  line-height: 1.8rem;
+  display: flex;
+  z-index: 22;
 }
 
 #contactForm h3 {
@@ -636,15 +604,15 @@ nav ul li a {
 }
 
 #contactForm textarea::selection {
-  background: #fff;
   color: #15202bcf;
+  background: #fff;
 }
 
 #contactForm button {
-  width: 7rem;
   font-size: 1.2rem;
-  background: #15202b;
   color: #20c997;
+  background: #15202b;
+  width: 7rem;
   box-shadow: 0 0.125em .25em rgba(0, 0, 0, .5);
   position: relative;
 }
@@ -654,25 +622,25 @@ nav ul li a {
 }
 
 #contactForm button span {
-  opacity: 0;
-  position: absolute;
-  top: 4.5rem;
-  right: -3.85rem;
+  background: #15202b;
   width: 12rem;
   border-radius: .8rem;
   padding: .5rem;
-  background: #15202b;
+  position: absolute;
+  top: 4.5rem;
+  right: -3.85rem;
+  opacity: 0;
   transition: .5s ease;
 }
 
 #contactForm button span::after {
   content: "";
-  position: absolute;
-  top: -1.9rem;
-  right: 6rem;
   border-width: 15px;
   border-style: solid;
   border-color: #15202b transparent transparent;
+  position: absolute;
+  top: -1.8rem;
+  right: 6rem;
   transform: scaleY(-1);
 }
 
@@ -681,52 +649,51 @@ nav ul li a {
 /* FOOTER */
 
 #sectionFooter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 14rem;
   padding: 4.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #copyright {
-  text-align: center;
   color: #20c997;
+  text-align: center;
 }
 
 #footerLinks {
-  display: flex;
-  justify-content: space-around;
   width: 20rem;
   margin: 2.5rem auto;
+  display: flex;
+  justify-content: space-around;
 }
 
 #footerLinks a {
-  background: #20c997;
   color: #15202b;
+  background: #20c997;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 #footerLinks a:hover {
-  background: #15202b;
-  color: #20c997;
-  border: solid 3px #20c997;
   cursor: pointer; 
+  color: #20c997;
+  background: #15202b;
+  border: solid 3px #20c997;
 }
 
 .footerLink {
+  font-size: 2rem;
   width: 3.5rem;
   height: 3.5rem;
-  font-size: 2rem;
-  
 }
 
 #btnCredits {
-  width: 7rem;
   font-size: 1.5rem;
   font-weight: 700;
+  width: 7rem;
   padding: 0 1rem;
 }
 
@@ -758,7 +725,7 @@ nav ul li a {
 
   /* /////////////////////////// */
 
-  /* ABOUT ME */
+  /* SKILLS */
 
   .learningSkillsCard {
     width: 29%;
@@ -805,9 +772,9 @@ nav ul li a {
   }
 
   .learningSkillsCard {
-    padding: 1.5rem;
-    margin: 1rem .5rem;
     width: 30%;
+    margin: 1rem .5rem;
+    padding: 1.5rem;
   }
 
   .skillsExpanded {
@@ -858,17 +825,17 @@ nav ul li a {
   }
 
   nav {
-    position: fixed;
-    z-index: 50;
     width: 100%;
     height: 5rem;
+    position: fixed;
+    z-index: 50;
   }
 
   #navGroup div {
-    display: block;
     background: white;
     width: 100%;
     height: 5rem;
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -879,9 +846,9 @@ nav ul li a {
   }
 
   nav i {
-    display: block;
     font-size: 2rem;
     padding-right: 1rem;
+    display: block;
   }
 
   nav ul hr {
@@ -889,21 +856,38 @@ nav ul li a {
   }
 
   nav ul {
+    font-size: 2rem;
+    background: #f4f4f4;
+    width: 100%;
+    height: 30rem;
+    border-bottom: 2px solid #15202b;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, .5);
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     position: absolute;
     top: -30rem;
     left: 0;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 30rem;
-    font-size: 2rem;
-    background: #f4f4f4;
-    border-bottom: 2px solid #15202b;
-    box-shadow: 0 1px 15px rgba(0, 0, 0, .5);
     z-index: -1;
     transition: .8s;
   }
+
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
+  /*###################################################################*/
 
   #navItems li:nth-child(1) {
     margin: 5rem 0 0;
@@ -1141,7 +1125,9 @@ nav ul li a {
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
-    box-shadow: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
+    border-top-left-radius: .35rem;
+    border-top-right-radius: .35rem;
   }
 
   #contactForm textarea {
@@ -1149,15 +1135,16 @@ nav ul li a {
     width: 100%;
     margin-bottom: 1rem;
     text-align: center;
+    border-bottom-left-radius: .35rem;
+    border-bottom-right-radius: .35rem;
   }
 
   #contactForm button {
     padding: 0;
-    width: 30%;
   }
 
   #contactForm button span {
-    right: -1.35rem;
+    right: -2.45rem;
   }
 
   #contactForm button span::after {
