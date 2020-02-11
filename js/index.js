@@ -30,11 +30,9 @@ window.onload = () => {
     if (window.innerWidth <= 786 && btnContact.style.background !== 'none') btnContact.style.background = 'none';
     if (window.innerWidth > 786 && btnContact.style.backgroundColor !== '#20c997') btnContact.style.background = '#20c997';
 
-    // Removes the transition from expanding skills to prevent smooth scaling when window is resized
+    // Removes the transition from expanding skills to prevent smooth scaling when window is resized.
     skillsDropdownTransition('none', 'none');
   });
-
-  
 
   /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -61,6 +59,7 @@ window.onload = () => {
     });
   }
 
+
   /////////////////////////////////////////////////////////////////////////////////////////
 
   navHamburger.addEventListener('click', () => {
@@ -72,6 +71,8 @@ window.onload = () => {
   });
 
   /////////////////////////////////////////////////////////////////////////////////////////
+
+  // This applies the active styling to each navigation link when they are clicked.
 
   applyActiveStyle = element => {
     const arr = [btnAbout, btnSkills, btnProjects];
@@ -109,6 +110,8 @@ window.onload = () => {
   
   /////////////////////////////////////////////////////////////////////////////////////////
 
+  // This is used to position the nav links underline.
+
   centerAlignElements = (fromElement, toElement) => {
     const fromElementPos = fromElement.getBoundingClientRect();
     const toElementPos = toElement.getBoundingClientRect();
@@ -119,7 +122,11 @@ window.onload = () => {
 
   /////////////////////////////////////////////////////////////////////////////////////////
 
+  // Sets up the navigation bar when the page loads.
+
   centerAlignElements(navUnderline, btnAbout);
+
+  applyActiveStyle(btnAbout);
 
   // /////////////////////////////////////////////////// //
   // /////////////////////////////////////////////////// //
@@ -136,7 +143,7 @@ window.onload = () => {
     groupSkillsLearning.style.transition = '.5s ease';
     groupSkillsLearning.classList.toggle('skillsExpanded');
     if (classSkillCard[0].classList.contains('fadeOut')) {
-      setTimeout(function (){
+      setTimeout(() => {
         for (let i = 0; i < classSkillCard.length; i++) {
           classSkillCard[i].classList.toggle('fadeOut');
           classSkillCard[i].classList.toggle('fadeIn');
@@ -168,10 +175,9 @@ window.onload = () => {
   // /////////////////////////////////////////////////// //
   // /////////////////////////////////////////////////// //
 
-  // SKILLS 
+  // CONTACT ME 
 
   const btnCopyEmail = document.getElementById('btnCopyEmail');
-  // const txtEmail = document.getElementById('txtEmail');
 
   /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -193,7 +199,10 @@ window.onload = () => {
 
   // BUG FIXES
 
-  // setTimeout(() => {
-  //   window.scrollTo(0, 0);
-  // },0);
+  // Scrolls to top when page loads
+
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  },0);
+
 }

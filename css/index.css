@@ -30,7 +30,7 @@ section {
   padding: 7.5rem 0 4.5rem;
 }
 
-p, h1, h2 {
+p, h1, h2, a {
   user-select: none;
 }
 
@@ -180,12 +180,13 @@ nav ul li a {
 }
 
 #portrait {
-  background: url("../images/about/portrait.jpg");
+  background: url("../images/about/portrait3.jpg");
   width: 20rem;
   height: 20rem;
   background-position: center;
   background-size: cover;
   border-radius: .5rem;
+  opacity: .85;
 }
 
 #groupAboutText {
@@ -510,7 +511,15 @@ nav ul li a {
 /* RUN */
 
 #showcaseRun .imageHalf {
-  background: url("../images/run.png") -9rem/cover no-repeat;
+  
+}
+
+#showcaseBattleships .imageHalf {
+  background: #333;
+}
+
+#showcaseBattleships .imageHalf div {
+  background: url("../images/projects/battleships.png") center/23rem no-repeat;
 }
 
 /* UNIQUE WORDS */
@@ -524,7 +533,7 @@ nav ul li a {
 }
 
 #showcaseUniqueWords .imageHalf div {
-  background: url("../images/uniqueWords.png") center/18rem no-repeat;
+  background: url("../images/projects/uniqueWords.png") center/18rem no-repeat;
 }
 
 /* CALCULATOR */
@@ -534,7 +543,7 @@ nav ul li a {
 }
 
 #showcaseCalculator .imageHalf div {
-  background: url("../images/calculator.png") center/18rem no-repeat;
+  background: url("../images/projects/calculator.png") center/18rem no-repeat;
 }
 
 /* GOBLIN CATCHER */
@@ -544,7 +553,7 @@ nav ul li a {
 }
 
 #showcaseGoblinCatcher .imageHalf div {
-  background: url("../images/goblinCatcher.png") center/cover no-repeat;
+  background: url("../images/projects/goblinCatcher.png") center/cover no-repeat;
 }
 
 /*///////////////////////////////////////////////////////*/
