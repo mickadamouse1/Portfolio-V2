@@ -30,7 +30,7 @@ section {
   padding: 7.5rem 0 4.5rem;
 }
 
-p, h1, h2, a {
+p, h1, h2, h3, a {
   user-select: none;
 }
 
@@ -41,7 +41,6 @@ a {
 
 .groupIntro {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
@@ -111,13 +110,12 @@ a {
 /* Non-Gobals */
 
 nav {
-  font-weight: 500;
   background: #fff;
   width: 100%;
   height: 5.5rem;
   display: flex;
   position: fixed;
-  z-index: 999999;
+  z-index: 999;
 }
 
 #navGroup {
@@ -172,28 +170,22 @@ nav ul li a {
 /* ABOUT ME */
 
 #sectionAbout {
-  height: auto;
   padding: 7.5rem 0 2rem;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 #portrait {
-  background: url("../images/about/portrait3.jpg");
+  background: url("../images/about/portrait3.jpg") center/cover;
   width: 20rem;
   height: 20rem;
-  background-position: center;
-  background-size: cover;
-  border-radius: .5rem;
+  border-radius: .35rem;
   opacity: .85;
 }
 
 #groupAboutText {
   color: #fff;
   margin: 0 0 0 1.6rem;
-  align-items: flex-start;
-  flex-direction: column;
 }
 
 #groupAboutText h1 {
@@ -231,12 +223,11 @@ nav ul li a {
 #groupMediaLinks p {
   font-size: 1.05rem;
   color: #ffffffa1;
-  width: auto;
-  padding: 0;
 }
 
 #groupMediaLinks p:hover {
   color: #fff;
+  user-select: text;
 }
 
 /* /////////////////////////////////////////////////// */
@@ -252,7 +243,6 @@ nav ul li a {
 #groupSkills {
   margin: 2rem 0 0;
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
@@ -359,7 +349,7 @@ nav ul li a {
   width: 30%;
   height: auto;
   text-align: center;
-  border-radius: .25rem;
+  border-radius: .35rem;
   box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.2);
   margin: 1rem;
   padding: 2rem;
@@ -394,7 +384,6 @@ nav ul li a {
 #groupProjects {
   margin: 2rem auto;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -402,7 +391,6 @@ nav ul li a {
 .showcase {
   background: #fff;
   width: 50rem;
-  height: auto;
   box-shadow: 0 .5px 2px rgba(0,0,0,0.3);
   margin: 2.5rem 0;
   display: inline-grid;
@@ -416,7 +404,6 @@ nav ul li a {
 .image {
   width: 100%;
   height: 100%;
-  position: absolute;
 }
 
 .textHalf {
@@ -446,14 +433,12 @@ nav ul li a {
 .textHalf .techUsed {
   font-size: 2rem;
   font-weight: 300;
-  color: #15202b;
   margin-left: .4rem;
 }
 
 .textHalf div {
   margin: 1rem .4rem;
   display: flex;
-  align-items: center;
 }
 
 .textHalf div i {
@@ -477,8 +462,7 @@ nav ul li a {
 
 .projectLink {
   font-size: 1.3rem;
-  font-weight: 700;
-  text-shadow: 0 .5px 1px rgba(0,0,0,0.1);
+  text-shadow: 0 .5px 1px rgba(0,0,0,0.3);
   height: 3.5rem; 
   border-top: 2px solid rgba(0,0,0,.02);
   display: flex;
@@ -573,14 +557,11 @@ nav ul li a {
   width: 31rem;
   margin: 2.5rem auto 0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: row;
 }
 
 #contactForm h3, #contactForm textarea, #contactForm button {
   font-size: 1rem;
-  background: #fff;
   height: 3rem;
   border: none;
   box-shadow: 0 0.125em .25em rgba(0, 0, 0, 0.1);
@@ -588,19 +569,21 @@ nav ul li a {
 }
 
 #contactForm h3, #contactForm textarea {
-  resize: none;
-  overflow: hidden;
   font-size: 1.1rem;
-  font-family: 'raleway', sans-serif;
   color: #15202bcf;
-  align-items: center;
-  line-height: 1.8rem;
-  display: flex;
-  z-index: 22;
 }
 
 #contactForm h3 {
-  width: auto;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+#contactForm textarea {
+  resize: none;
+  overflow: hidden;
+  font-family: 'raleway', sans-serif;
+  line-height: 1.8rem;
 }
 
 #contactForm textarea, #contactForm button {
@@ -608,8 +591,8 @@ nav ul li a {
 }
 
 #contactForm textarea {
-  box-shadow: .19rem 0.125rem .25rem rgba(0, 0, 0, 0.1);
   width: 23rem;
+  box-shadow: .19rem 0.125rem .25rem rgba(0, 0, 0, 0.1);
 }
 
 #contactForm textarea::selection {
@@ -622,12 +605,16 @@ nav ul li a {
   color: #20c997;
   background: #15202b;
   width: 7rem;
-  box-shadow: 0 0.125em .25em rgba(0, 0, 0, .5);
+  box-shadow: .5px 0.125rem .25rem rgba(0, 0, 0, .35);
   position: relative;
 }
 
 #contactForm button:hover {
   cursor: pointer;
+}
+
+#contactForm button::-moz-focus-inner {
+  border: 0;
 }
 
 #contactForm button span {
@@ -661,7 +648,6 @@ nav ul li a {
   height: 14rem;
   padding: 4.5rem 0;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
 }
@@ -754,6 +740,10 @@ nav ul li a {
 
   /* ABOUT ME */
 
+  #sectionAbout {
+    align-items: center;
+  }
+
   #portrait {
     width: 16rem;
     height: 16rem;
@@ -809,6 +799,10 @@ nav ul li a {
 
   .textHalf #iconJS {
     font-size: 2.7rem;
+  }
+
+  #showcaseBattleships .title, #showcaseCalculator .title {
+    font-size: 3.5rem;
   }
 }
 
@@ -881,23 +875,6 @@ nav ul li a {
     transition: .8s;
   }
 
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-  /*###################################################################*/
-
   #navItems li:nth-child(1) {
     margin: 5rem 0 0;
   }
@@ -907,8 +884,8 @@ nav ul li a {
   }
 
   #btnContact {
-    background: none;
     color: #212529ad;
+    background: none;
   }
 
   #underline {
@@ -940,17 +917,19 @@ nav ul li a {
   }
 
   #groupAboutText {
-    display: flex;
-    align-items: center;
     text-align: center;
     margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   #groupAboutText h1 {
-    width: 78%;
-    line-height: 4.5rem;
-    margin: .5rem 0;
     font-size: 4rem;
+    width: 78%;
+    margin: .5rem 0;
+    line-height: 4.5rem;
+    
   }
 
   #groupAboutText h1 span {
@@ -958,24 +937,20 @@ nav ul li a {
   }
 
   #txtAbout {
+    width: 33rem;
     margin: .5rem 0;
     padding: 0;
-    width: 33rem;
   }
 
   #groupMediaLinks {
-    margin: 1rem 0 0;
     width: 18rem;
-    flex-wrap: wrap;
+    margin: 1rem 0 0;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   #groupMediaLinks a {
     margin: 0 .5rem 1rem;
-  }
-
-  #groupAboutText #groupMediaLinks p {
-    width: auto;
   }
 
   /* //////////////////////////// */
@@ -1014,9 +989,8 @@ nav ul li a {
     grid-template-rows: 20rem auto 5rem 5rem;
   }
 
-  #showcaseRun .imageHalf {
-    background-position: 0rem -2rem;
-    background-size: cover;
+  #showcaseBattleships .imageHalf div {
+    background-size: 22rem;
   }
 
   #showcaseUniqueWords .imageHalf div, #showcaseCalculator .imageHalf div {
@@ -1027,6 +1001,14 @@ nav ul li a {
   #showcaseGoblinCatcher .imageHalf {
     background-position: center -4rem;
     background-size: 34rem;
+  }
+
+  #showcaseBattleships .title, #showcaseCalculator .title {
+    font-size: 4.5rem;
+  }
+
+  #showcaseUniqueWords .title, #showcaseGoblinCatcher .title {
+    font-size: 3.5rem;
   }
 
   .projectLink {
@@ -1060,8 +1042,8 @@ nav ul li a {
   }
 
   .groupIntro p {
-    width: 100%;
     font-size: 1rem;
+    width: 100%;
   }
 
   /* /////////////////////////// */
@@ -1082,6 +1064,10 @@ nav ul li a {
 
   .header {
     font-size: 1.7rem;
+  }
+
+  #groupMediaLinks p {
+    width: auto;
   }
 
   /* /////////////////////////// */
@@ -1109,11 +1095,11 @@ nav ul li a {
   }
 
   .textHalf div {
-    justify-content: center;;
+    justify-content: center;
   }
 
   #showcaseRun .imageHalf {
-    background-position: center;;
+    background-position: center;
   }
 
   /* /////////////////////////// */
@@ -1130,22 +1116,21 @@ nav ul li a {
   }
 
   #contactForm h3 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
     font-size: 1.5rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
+    width: 100%;
     border-top-left-radius: .35rem;
     border-top-right-radius: .35rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
+    justify-content: center;
   }
 
   #contactForm textarea {
-    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
     width: 100%;
-    margin-bottom: 1rem;
     text-align: center;
+    margin-bottom: 1rem;
     border-bottom-left-radius: .35rem;
     border-bottom-right-radius: .35rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
   }
 
   #contactForm button {
@@ -1173,9 +1158,9 @@ nav ul li a {
   /* ABOUT ME */
 
   #groupAboutText h1 {
-   width: 87%;
-    line-height: 3.8rem;
     font-size: 3rem;
+    width: 87%;
+    line-height: 3.8rem;
   }
 
   #groupAboutText h1 span {
@@ -1187,8 +1172,8 @@ nav ul li a {
   /* SKILLS */
 
   .skillCard {
-    height: auto;
     width: 18rem;
+    height: auto;
     padding: 2rem 0;
   }
 
@@ -1198,6 +1183,14 @@ nav ul li a {
 
   .skillsExpanded {
     max-height: 60rem !important;
+  }
+
+  /* /////////////////////////// */
+
+  /* PROJECTS */
+
+  #showcaseBattleships .imageHalf div {
+    background-size: 19rem;
   }
 
   /* /////////////////////////// */

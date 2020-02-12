@@ -32,6 +32,9 @@ window.onload = () => {
 
     // Removes the transition from expanding skills to prevent smooth scaling when window is resized.
     skillsDropdownTransition('none', 'none');
+
+    // Closes nav dropdown when page expands to certain width
+    if (window.innerWidth > 786 && navItems.classList.contains('navExpanded')) navItems.classList.remove('navExpanded');
   });
 
   /////////////////////////////////////////////////////////////////////////////////////////
