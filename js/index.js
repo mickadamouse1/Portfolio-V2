@@ -115,7 +115,7 @@ window.onload = () => {
 
   // This is used to position the nav links underline.
 
-  centerAlignElements = (fromElement, toElement) => {
+  const centerAlignElements = (fromElement, toElement) => {
     const fromElementPos = fromElement.getBoundingClientRect();
     const toElementPos = toElement.getBoundingClientRect();
     const centerPos = (toElementPos.width - fromElementPos.width) / 2;
@@ -139,8 +139,21 @@ window.onload = () => {
 
   /////////////////////////////////////////////////////////////////////////////////////////
 
+  const skillInfo = document.getElementsByClassName('skillInfo');
+  const keySkills = document.getElementsByClassName('keySkills');
+  const keySkillCards = document.getElementsByClassName('skillCard');
+
+  for (let i = 0; i < keySkillCards.length; i++) {
+    keySkillCards[i].addEventListener('click', () => {
+      skillInfo[i].classList.toggle('fadeOut');
+      keySkills[i].classList.toggle('fadeOut');
+    });
+  }
+
+  /////////////////////////////////////////////////////////////////////////////////////////
+
   const btnSkillsDropDownArrow = document.getElementById('btnSkillsDropDownArrow');
-  var classSkillCard = document.getElementsByClassName('learningSkillsCard');
+  const classSkillCard = document.getElementsByClassName('learningSkillsCard');
 
   btnSkillsDropDownArrow.addEventListener('click', () => {
     groupSkillsLearning.style.transition = '.5s ease';

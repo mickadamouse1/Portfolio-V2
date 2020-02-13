@@ -30,7 +30,7 @@ section {
   padding: 7.5rem 0 4.5rem;
 }
 
-p, h1, h2, h3, a {
+p, h1, h2, h3, a, li {
   user-select: none;
 }
 
@@ -304,6 +304,7 @@ nav ul li a {
   font-size: 1.1rem;
   width: 80%;
   text-align: center;
+  transition: .35s ease;
 }
 
 #iconHTML, #iconCSS {
@@ -313,6 +314,18 @@ nav ul li a {
 
 #iconJS {
   font-size: 2.8rem;
+}
+
+/* Key skill areas */
+
+.keySkills {
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.95rem;
+  display: block;
+  position: absolute;
+  top: 8rem;
+  transition: .35s ease;
 }
 
 /* Skills learning */
@@ -492,11 +505,7 @@ nav ul li a {
 /***********************************/
 /* INDIVIDUAL PROJECT STYLING */
 
-/* RUN */
-
-#showcaseRun .imageHalf {
-  
-}
+/* BATTLESHIPS */
 
 #showcaseBattleships .imageHalf {
   background: #333;
@@ -1096,10 +1105,6 @@ nav ul li a {
 
   .textHalf div {
     justify-content: center;
-  }
-
-  #showcaseRun .imageHalf {
-    background-position: center;
   }
 
   /* /////////////////////////// */
