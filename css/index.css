@@ -1176,14 +1176,17 @@ nav ul li a {
 
   /* SKILLS */
 
+  .skillCard, #groupSkillsLearning {
+    width: 19rem;
+  }
+
   .skillCard {
-    width: 18rem;
     height: auto;
     padding: 2rem 0;
   }
 
-  #groupSkillsLearning {
-    width: 18rem;
+  .keySkills {
+    top: 7rem;
   }
 
   .skillsExpanded {
