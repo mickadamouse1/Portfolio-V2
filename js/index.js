@@ -30,17 +30,21 @@ window.onload = () => {
 
   window.addEventListener('resize', () => {
     navUnderline.style.transition = 'none';
-    if (activeButton !== btnContact) applyActiveStyle(activeButton);
-
-    // resets the colour of the "Contact Me" button when the window is resized
-    if (window.innerWidth <= 786 && btnContact.style.background !== 'none') btnContact.style.background = 'none';
-    if (window.innerWidth > 786 && btnContact.style.backgroundColor !== '#20c997') btnContact.style.background = '#20c997';
+    btnContact.style.transition = 'none';
+    applyActiveStyle(activeButton);
 
     // Removes the transition from expanding skills to prevent smooth scaling when window is resized.
     skillsDropdownTransition('none', 'none');
 
     // Closes nav dropdown when page expands to certain width
-    if (window.innerWidth > 786 && navItems.classList.contains('navExpanded')) navItems.classList.remove('navExpanded');
+    if (window.innerWidth > 786 && navItems.classList.contains('navExpanded')) {
+      navItems.classList.remove('navExpanded');
+    } 
+
+    if (window.innerWidth < 786) {
+      btnContact.style.background = 'none';
+
+    }
   });
 
   /////////////////////////////////////////////////////////////////////////////////////////
@@ -103,28 +107,41 @@ window.onload = () => {
       arrNavItems[i].classList.remove('active');
     }
     element.classList.toggle('active');
+   
 
-    if (element !== btnContact && navUnderline.classList.contains('fadeOut')) {
+    if (element != btnContact && navUnderline.classList.contains('fadeOut')) {
       navUnderline.classList.remove('fadeOut');
       navUnderline.style.transition = '.5s ease'
-      btnContact.style.background = '#20c997'
+      
+      if (window.innerWidth > 786) {
+        btnContact.style.background = '#20c997';
+      } else {
+        btnContact.style.color = '#212529ad';
+      }
     }
     
-    
-
-    if (element === btnContact) {
-      navUnderline.style.transition = '.25s ease';
+    if (element == btnContact) {
+      navUnderline.style.transition = '.1s ease';
       navUnderline.classList.add('fadeOut');
 
       // This only applies when the nav isnt a dropdown
       if (window.innerWidth > 786) {
-        btnContact.style.transition = '.5s ease';
         btnContact.style.background = '#212529';
+        btnContact.style.color = '#fff'
+      } else {
+        btnContact.style.color = '#15202b';
       }
-      
+    } else {
+      if (window.innerWidth > 786) {
+        btnContact.style.background = '#20c997';
+        btnContact.style.color = '#fff';
+      } else {
+        btnContact.style.background = 'none';
+        btnContact.style.color = '#212529ad';
+      }
     }
-
-    if (element !== btnContact) centerAlignElements(navUnderline, element);
+   
+    if (element != btnContact) centerAlignElements(navUnderline, element);
   }
   
   /////////////////////////////////////////////////////////////////////////////////////////
@@ -144,7 +161,7 @@ window.onload = () => {
   // This applies the active style of the nav as the user scrolls past each section
 
   setInterval(() => {
-    let x = window.pageYOffset;
+    let x = window.pageYOffset + 88;
 
     let aboutY = sectionAbout.offsetTop;
     let skillsY = sectionSkills.offsetTop;
@@ -152,7 +169,7 @@ window.onload = () => {
 
     if (x < skillsY && !autoScrolling && activeButton != btnAbout) {
       applyActiveStyle(btnAbout);
-    } else if (x >= skillsY && x < projectsY &&!autoScrolling && activeButton != btnSkills) {
+    } else if (x >= skillsY && x < projectsY && !autoScrolling && activeButton != btnSkills) {
       applyActiveStyle(btnSkills);
     } else if (x >= projectsY && x < projectsY + (sectionProjects.offsetHeight / 1.15) &&!autoScrolling && activeButton != btnProjects) {
       applyActiveStyle(btnProjects);
@@ -160,6 +177,17 @@ window.onload = () => {
       applyActiveStyle(btnContact);
     }
   }, 200);
+
+  /////////////////////////////////////////////////////////////////////////////////////////
+
+  // This is used to prevent the nav transition from getting stuck at .1s ease (after page resize)
+
+  window.addEventListener('scroll', () => {
+    if (navUnderline.transition != '.5s ease') navUnderline.style.transition = '.5s ease';
+    if (btnContact.style.transition != '.5s ease') {
+      btnContact.style.transition = '.5s ease';
+    }
+  });
 
   /////////////////////////////////////////////////////////////////////////////////////////
 
