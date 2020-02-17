@@ -19,6 +19,12 @@ window.onload = () => {
   navUnderline.style.display = 'block';
 
   let activeButton = btnAbout;
+
+  let autoScrolling = true;
+
+  const arrNavItems = [btnAbout, btnSkills, btnProjects, btnContact];
+
+  let navTimeouts = [];
   
   /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -39,7 +45,7 @@ window.onload = () => {
 
   /////////////////////////////////////////////////////////////////////////////////////////
 
-  const arrNavItems = [btnAbout, btnSkills, btnProjects, btnContact];
+  // This is the onclick event for each nav item
 
   for (let i = 0; i < arrNavItems.length; i++) {
     // This variable is used to create the name of the section each nav item will scroll to.
@@ -47,11 +53,26 @@ window.onload = () => {
 
     arrNavItems[i].addEventListener('click', () => {
       navUnderline.style.transition = '.5s ease';
-      activeButton = arrNavItems[i];
       applyActiveStyle(arrNavItems[i]);
 
+      // Clears previous timeouts to prevent overlapping executions
+      while (navTimeouts.length > 0) {
+        clearTimeout(navTimeouts[0]);
+        navTimeouts.length = navTimeouts.length - 1;
+      }
+
+      // This stop the auto styling when scrolling past sections for 2 seconds
+      autoScrolling = true;
+      const y = setTimeout(() => {
+        autoScrolling = false;
+      }, 1000);
+      navTimeouts.push(y);
+    
       // smooth scrolling location (x.slice removes the "btn" from the variable name)
-      document.querySelector('#section' + x.slice(3)).scrollIntoView({behavior: 'smooth'});
+      // The timeout is necessary for Firefox browser support
+      setTimeout(() => {
+        document.querySelector('#section' + x.slice(3)).scrollIntoView({behavior: 'smooth'});
+      }, 25);
 
       // If the dropdown is enabled, after scrolling, disable it
       if (window.innerWidth <= 786) {
@@ -65,12 +86,10 @@ window.onload = () => {
 
   /////////////////////////////////////////////////////////////////////////////////////////
 
+  // This expands and collapses the navigation drop down menu on smaller devices
+
   navHamburger.addEventListener('click', () => {
-    if (navItems.classList.contains('navExpanded')) {
-      navItems.classList.remove('navExpanded');
-    } else {
-      navItems.classList.add('navExpanded');
-    }
+    navItems.classList.toggle('navExpanded');
   });
 
   /////////////////////////////////////////////////////////////////////////////////////////
@@ -78,32 +97,29 @@ window.onload = () => {
   // This applies the active styling to each navigation link when they are clicked.
 
   applyActiveStyle = element => {
-    const arr = [btnAbout, btnSkills, btnProjects];
-    for (var i = 0; i < arr.length; i++) {
-      arr[i].classList.remove('active');
+    activeButton = element;
+
+    for (var i = 0; i < arrNavItems.length - 1; i++) {
+      arrNavItems[i].classList.remove('active');
     }
     element.classList.toggle('active');
 
-    if (element !== btnContact && navUnderline.classList.contains('fadeOut')) navUnderline.classList.remove('fadeOut');
+    if (element !== btnContact && navUnderline.classList.contains('fadeOut')) {
+      navUnderline.classList.remove('fadeOut');
+      navUnderline.style.transition = '.5s ease'
+      btnContact.style.background = '#20c997'
+    }
+    
+    
 
     if (element === btnContact) {
-      navUnderline.style.transition = '.1s ease';
+      navUnderline.style.transition = '.25s ease';
       navUnderline.classList.add('fadeOut');
 
       // This only applies when the nav isnt a dropdown
       if (window.innerWidth > 786) {
-        btnContact.style.transition = '.25s ease';
+        btnContact.style.transition = '.5s ease';
         btnContact.style.background = '#212529';
-
-        // after .25 seconds, reset the color
-        setTimeout(() => {
-          btnContact.style.background = '#20c997';
-
-          // another timeout stops the animation from ending too early
-          setTimeout(() => {
-            btnContact.style.transition = 'none';
-          }, 250)
-        }, 250);
       }
       
     }
@@ -122,6 +138,28 @@ window.onload = () => {
     fromElement.style.left = toElementPos.x + centerPos;
     fromElement.style.top = toElementPos.y + 23;
   }
+
+  /////////////////////////////////////////////////////////////////////////////////////////
+
+  // This applies the active style of the nav as the user scrolls past each section
+
+  setInterval(() => {
+    let x = window.pageYOffset;
+
+    let aboutY = sectionAbout.offsetTop;
+    let skillsY = sectionSkills.offsetTop;
+    let projectsY = sectionProjects.offsetTop;
+
+    if (x < skillsY && !autoScrolling && activeButton != btnAbout) {
+      applyActiveStyle(btnAbout);
+    } else if (x >= skillsY && x < projectsY &&!autoScrolling && activeButton != btnSkills) {
+      applyActiveStyle(btnSkills);
+    } else if (x >= projectsY && x < projectsY + (sectionProjects.offsetHeight / 1.15) &&!autoScrolling && activeButton != btnProjects) {
+      applyActiveStyle(btnProjects);
+    } else if (x >= projectsY + (sectionProjects.offsetHeight / 1.15) && !autoScrolling && activeButton != btnContact) {
+      applyActiveStyle(btnContact);
+    }
+  }, 200);
 
   /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -221,4 +259,17 @@ window.onload = () => {
     window.scrollTo(0, 0);
   },0);
 
+  const setStartDelay = timer => {
+    const x = setTimeout(() => {
+      autoScrolling = false;
+    }, timer);
+  }
+
+  const isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+
+  if (isChrome) {
+    setStartDelay(900);
+  } else {
+    setStartDelay(250);
+  }
 }
